@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nome": "Campus Alto Paraopeba",
+    "sigla": "CAP",
+    "linkPdf": "https://ufsj.edu.br/portal2-repositorio/File/proae/CAP%20FEVEREIRO%202026.pdf"
+  },
+  {
+    "id": 2,
+    "nome": "Campus Centro-Oeste Dona Lindu",
+    "sigla": "CCO",
+    "linkPdf": "https://ufsj.edu.br/portal2-repositorio/File/proae/RU%20CCO%20-FEVEREIRO-%202026.pdf"
+  },
+  {
+    "id": 3,
+    "nome": "Campus Dom Bosco",
+    "sigla": "CDB",
+    "linkPdf": "https://ufsj.edu.br/portal2-repositorio/File/proae/CDB%20Fevereiro.pdf"
+  },
+  {
+    "id": 4,
+    "nome": "Campus Santo Antônio",
+    "sigla": "CSA",
+    "linkPdf": "https://ufsj.edu.br/portal2-repositorio/File/proae/CARDAPIO%20CSA%20FEV%202026.pdf"
+  },
+  {
+    "id": 5,
+    "nome": "Campus Sete Lagoas",
+    "sigla": "CSL",
+    "linkPdf": "https://ufsj.edu.br/portal2-repositorio/File/proae/CSL%20FEVEREIRO%20%202026.pdf"
+  },
+  {
+    "id": 6,
+    "nome": "Campus Tancredo Neves",
+    "sigla": "CTAN",
+    "linkPdf": "https://ufsj.edu.br/portal2-repositorio/File/proae/CTAN%20%20FEVEREIRO.pdf"
+  }
+]

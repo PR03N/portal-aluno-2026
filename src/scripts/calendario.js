@@ -1,3 +1,13 @@
+/* 
+Planilha usada para configurar o calendário disponível em: https://docs.google.com/spreadsheets/d/1RBVOdw8O2wAPKhs2fktp60CcFam7eUT09dMbl47_RHM/edit?usp=sharing
+
+Para que outros eventos e datas fiquem disponíveis na página principal é necessário remover as linhas de datas passadas
+
+Caso queira adicionar uma categoria nova para ser mostrada no calendário, apenas adicione a categoria (em lowercase) no "return"
+
+Limitei para aparecerem apenas 4 datas, caso queira mais, altere o slice
+*/
+
 const ID_PLANILHA = "1RBVOdw8O2wAPKhs2fktp60CcFam7eUT09dMbl47_RHM";
 const NOME_ABA = "Calendario";
 
@@ -6,14 +16,18 @@ const url = `https://opensheet.elk.sh/${ID_PLANILHA}/${NOME_ABA}`;
 async function carregarCalendario() {
   try {
     const resposta = await fetch(url);
-    const eventos = await resposta.json();
+    const todosEventos = await resposta.json();
+    const eventosFiltrados = todosEventos.filter((evento) => {
+      if (!evento.Categoria) return false;
+      const categoria = evento.Categoria.toLowerCase();
 
+      return categoria.includes("acadêmico") || categoria.includes("evento"); // Adicione mais categorias aqui! Ex: categoria.includes("acadêmico") || categoria.includes("evento") || categoria.includes("feriado") || categoria.includes("recesso");
+    });
+    const eventosLimitados = eventosFiltrados.slice(0, 4); // Limite de datas
     const container = document.getElementById("lista-calendario");
     container.innerHTML = "";
-
-    eventos.forEach((evento, index) => {
-      const eOUltimoItem = index === eventos.length - 1;
-
+    eventosLimitados.forEach((evento, index) => {
+      const eOUltimoItem = index === eventosLimitados.length - 1;
       const itemHTML = `
         <div class="flex gap-3">
           <div class="flex flex-col items-center">
@@ -30,6 +44,10 @@ async function carregarCalendario() {
 
       container.innerHTML += itemHTML;
     });
+    if (eventosLimitados.length === 0) {
+      container.innerHTML =
+        '<p class="text-white/70 text-[13px] mt-2">Nenhum evento próximo.</p>';
+    }
   } catch (erro) {
     document.getElementById("lista-calendario").innerHTML =
       '<p class="text-white/70 text-[13px]">Erro ao carregar calendário.</p>';
