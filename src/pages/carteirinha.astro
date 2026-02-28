@@ -1,93 +1,62 @@
 ---
-import '../styles/global.css';
+import LayoutBase from '../layouts/LayoutBase.astro';
 ---
 
-<html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portal do Aluno criado pela Pró-Reitoria de Ensino de Graduação da Universidade Federal de São João del-Rei (PROEN UFSJ)">
-    <title>Portal do Aluno - UFSJ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
-</head>
-
-<body class="bg-[#920F21] antialised">
-
-    <header class="px-6 pt-8 pb-14 flex items-center justify-between">
-        <div>
-            <p class="text-white text-xs font-light uppercase">PROEN UFSJ</p>
-            <h1 class="text-white text-2xl font-bold">Portal do Aluno</h1>
-        </div>
-
-        <a href="/" class="text-white hover:text-white/70 transition-colors">
-            <i class="fa-solid fa-house text-xl"></i>
+<LayoutBase mostrarBotaoVoltar>
+    <div class="flex flex-col gap-4 max-w-100 mx-auto">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScbpWfrOxuOOSxMuS4bTb8uDWSe-iotcgkvl6L1ZYvmvB5XPQ/viewform"
+            target="_blank" class="bg-[#BC1823] text-white rounded-[20px] p-6 flex">
+            <div class="pr-4">
+                <h2 class="font-bold text-lg leading-tight mb-1">Solicitação de Carteirinha de Estudante</h2>
+                <p class="text-white/80 text-xs font-light leading-tight mt-2">Solicite sua carteirinha</p>
+            </div>
+            <i class="fa-solid fa-arrow-right text-2xl group-hover:translate-x-1 transition-transform"></i>
         </a>
-    </header>
 
-    <main class="bg-white min-h-screen rounded-t-[40px] px-6 py-8 -mt-8">
-        <div class="flex flex-col gap-4 max-w-100 mx-auto">
+        <div class="bg-gray-50 border border-gray-100 rounded-[20px] p-6 mt-2">
+            <h3 class="text-sm text-gray-500 font-bold mb-5 flex items-center gap-2 uppercase tracking-wide">
+                <i class="fa-solid fa-location-dot text-[#BC1823]"></i>Onde usar
+            </h3>
+            <div class="flex justify-evenly items-center px-2">
 
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScbpWfrOxuOOSxMuS4bTb8uDWSe-iotcgkvl6L1ZYvmvB5XPQ/viewform"
-                target="_blank" class="bg-[#BC1823] text-white rounded-[20px] p-6 flex">
-                <div class="pr-4">
-                    <h2 class="font-bold text-lg leading-tight mb-1">Solicitação de Carteirinha de Estudante</h2>
-                    <p class="text-white/80 text-xs font-light leading-tight mt-2">Solicite sua carteirinha</p>
+                <div class="flex flex-col items-center gap-2">
+                    <div class="bg-red-100 text-[#C81D25] w-12 h-12 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-utensils text-xl"></i>
+                    </div>
+                    <span class="text-[11px] font-bold text-gray-700">RUs</span>
                 </div>
-                <i class="fa-solid fa-arrow-right text-2xl group-hover:translate-x-1 transition-transform"></i>
-            </a>
 
-            <div class="bg-gray-50 border border-gray-100 rounded-[20px] p-6 mt-2">
-                <h3 class="text-sm text-gray-500 font-bold mb-5 flex items-center gap-2 uppercase tracking-wide">
-                    <i class="fa-solid fa-location-dot text-[#BC1823]"></i>Onde usar
-                </h3>
-                <div class="flex justify-evenly items-center px-2">
-
-                    <div class="flex flex-col items-center gap-2">
-                        <div class="bg-red-100 text-[#C81D25] w-12 h-12 rounded-full flex items-center justify-center">
-                            <i class="fa-solid fa-utensils text-xl"></i>
-                        </div>
-                        <span class="text-[11px] font-bold text-gray-700">RUs</span>
+                <div class="flex flex-col items-center gap-2">
+                    <div class="bg-red-100 text-[#C81D25] w-12 h-12 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-book text-xl"></i>
                     </div>
-
-                    <div class="flex flex-col items-center gap-2">
-                        <div class="bg-red-100 text-[#C81D25] w-12 h-12 rounded-full flex items-center justify-center">
-                            <i class="fa-solid fa-book text-xl"></i>
-                        </div>
-                        <span class="text-[11px] font-bold text-gray-700 uppercase">Bibliotecas</span>
-                    </div>
-
-                    <div class="flex flex-col items-center gap-2">
-                        <div class="bg-red-100 text-[#C81D25] w-12 h-12 rounded-full flex items-center justify-center">
-                            <i class="fa-solid fa-calendar-check text-xl"></i>
-                        </div>
-                        <span class="text-[11px] font-bold text-gray-700 uppercase">Eventos</span>
-                    </div>
-
+                    <span class="text-[11px] font-bold text-gray-700 uppercase">Bibliotecas</span>
                 </div>
-            </div>
 
-            <div class="bg-gray-50 border border-gray-100 rounded-[20px] p-6 mt-2">
-                <h3 class="text-sm text-gray-500 font-bold mb-5 flex items-center gap-2 uppercase tracking-wide">
-                    <i class="fa-solid fa-circle-info text-[#BC1823]"></i> Importante
-                </h3>
+                <div class="flex flex-col items-center gap-2">
+                    <div class="bg-red-100 text-[#C81D25] w-12 h-12 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-calendar-check text-xl"></i>
+                    </div>
+                    <span class="text-[11px] font-bold text-gray-700 uppercase">Eventos</span>
+                </div>
 
-                <p class="text-[14px] text-gray-700 leading-relaxed font-medium">
-                    A Carteirinha Estudantil é indispensável para a sua rotina na UFSJ. Usada para a realização de
-                    empréstimos de livros nas bibliotecas, ela também agiliza o seu dia a dia nos Restaurantes
-                    Universitários (RUs).
-                </p>
-                <p class="text-[14px] text-gray-700 leading-relaxed font-medium">
-                    <my-font class="text-[#BC1823]">Dica prática</my-font>: Insira créditos na sua carteirinha
-                    antecipadamente para garantir um acesso muito mais rápido e evitar filas nos horários de pico.
-                </p>
             </div>
         </div>
-    </main>
-</body>
 
-</html>
+        <div class="bg-gray-50 border border-gray-100 rounded-[20px] p-6 mt-2">
+            <h3 class="text-sm text-gray-500 font-bold mb-5 flex items-center gap-2 uppercase tracking-wide">
+                <i class="fa-solid fa-circle-info text-[#BC1823]"></i> Importante
+            </h3>
+
+            <p class="text-[14px] text-gray-700 leading-relaxed font-medium">
+                A Carteirinha Estudantil é indispensável para a sua rotina na UFSJ. Usada para a realização de
+                empréstimos de livros nas bibliotecas, ela também agiliza o seu dia a dia nos Restaurantes
+                Universitários (RUs).
+            </p>
+            <p class="text-[14px] text-gray-700 leading-relaxed font-medium">
+                <my-font class="text-[#BC1823]">Dica prática</my-font>: Insira créditos na sua carteirinha
+                antecipadamente para garantir um acesso muito mais rápido e evitar filas nos horários de pico.
+            </p>
+        </div>
+    </div>
+</LayoutBase>

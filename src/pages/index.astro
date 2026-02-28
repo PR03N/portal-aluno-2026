@@ -1,121 +1,91 @@
 ---
-import '../styles/global.css';
+import LayoutBase from '../layouts/LayoutBase.astro';
 ---
 
-<html lang="pt-BR">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description"
-		content="Portal do Aluno criado pela Pró-Reitoria de Ensino de Graduação da Universidade Federal de São João del-Rei (PROEN UFSJ)">
-	<title>Portal do Aluno - UFSJ</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+<LayoutBase mostrarBotaoVoltar={false}>
 	<script src="../scripts/calendario.js"></script>
-</head>
 
-<body class="bg-[#920F21] antialised">
+	<div class="grid grid-cols-2 gap-3 max-w-100 mx-auto">
 
-	<header class="px-6 pt-8 pb-14">
-		<p class="text-white text-xs font-light uppercase">PROEN UFSJ</p>
-		<h1 class="text-white text-2xl font-bold">Portal do Aluno</h1>
-	</header>
-
-	<main class="bg-white min-h-screen rounded-t-[40px] px-6 py-8 -mt-8">
-
-		<div class="grid grid-cols-2 gap-3 max-w-100 mx-auto">
-
-			<a href="https://ufsj.edu.br/portal2-repositorio/File/soces/Calendario%20Academico%202026%20CONEP.pdf"
-				target="_blank" class="col-span-2 bg-[#BC1823] text-white rounded-[20px] p-5">
-				<div class="flex justify-between items-start mb-4">
-					<div class="flex gap-3 items-center">
-						<i class="fa-solid fa-calendar text-3xl"></i>
-						<div>
-							<h2 class="font-bold text-lg">Calendário Acadêmico</h2>
-							<p class="text-xs text-white/80 font-light">2026</p>
-						</div>
+		<a href="https://ufsj.edu.br/portal2-repositorio/File/soces/Calendario%20Academico%202026%20CONEP.pdf"
+			target="_blank" class="col-span-2 bg-[#BC1823] text-white rounded-[20px] p-5">
+			<div class="flex justify-between items-start mb-4">
+				<div class="flex gap-3 items-center">
+					<i class="fa-solid fa-calendar text-3xl"></i>
+					<div>
+						<h2 class="font-bold text-lg">Calendário Acadêmico</h2>
+						<p class="text-xs text-white/80 font-light">2026</p>
 					</div>
-					<i class="fa-solid fa-arrow-right text-xl"></i>
-				</div>
-
-				<div id="lista-calendario" class="ml-3 mt-4 flex flex-col">
-					<p class="text-white/70 text-[13px] animate-pulse">Carregando datas do calendário...</p>
-				</div>
-
-			</a>
-
-			<a href="https://sigaa.ufsj.edu.br/sigaa/" target="_blank"
-				class="col-span-2 bg-[#BC1823] text-white rounded-[20px] p-5 flex justify-between items-center">
-				<div>
-					<h2 class="font-bold text-2xl leading-tight">SIGAA</h2>
-					<p class="text-xs font-light text-white/80 mt-1">Acesso rápido</p>
 				</div>
 				<i class="fa-solid fa-arrow-right text-xl"></i>
-			</a>
+			</div>
 
-			<a href="/ru"
-				class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
-				<i class="fa-solid fa-utensils text-3xl mb-2"></i>
-				<h3 class="font-bold text-lg leading-tight">Restaurante Universitário</h3>
-				<p class="text-xs font-light text-white/80 mt-1 leading-tight">Cardápios e horário de
-					funcionamento
-				</p>
-			</a>
+			<div id="lista-calendario" class="ml-3 mt-4 flex flex-col">
+				<p class="text-white/70 text-[13px] animate-pulse">Carregando datas do calendário...</p>
+			</div>
 
-			<a href="/carteirinha"
-				class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
-				<i class="fa-solid fa-id-card text-3xl mb-2"></i>
-				<h3 class="font-bold text-lg leading-tight">Carteirinha de Estudante</h3>
-				<p class="text-xs font-light text-white/80 mt-1 leading-tight">Solicite a sua já</p>
-			</a>
+		</a>
 
-			<a href="#"
-				class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
-				<i class="fa-solid fa-book text-3xl mb-2"></i>
-				<h3 class="font-bold text-lg leading-tight">Bibliotecas</h3>
-				<p class="text-xs font-light text-white/80 mt-1 leading-tight">Acervo e horário de funcionamento</p>
-			</a>
+		<a href="https://sigaa.ufsj.edu.br/sigaa/" target="_blank"
+			class="col-span-2 bg-[#BC1823] text-white rounded-[20px] p-5 flex justify-between items-center">
+			<div>
+				<h2 class="font-bold text-2xl leading-tight">SIGAA</h2>
+				<p class="text-xs font-light text-white/80 mt-1">Acesso rápido</p>
+			</div>
+			<i class="fa-solid fa-arrow-right text-xl"></i>
+		</a>
 
-			<a href="#"
-				class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
-				<i class="fa-solid fa-landmark text-3xl mb-2"></i>
-				<h3 class="font-bold text-[15px] leading-tight">Administração da Faculdade</h3>
-				<p class="text-xs font-light text-white/80 mt-1 leading-tight">Confira nossos departamentos</p>
-			</a>
+		<a href="/ru"
+			class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
+			<i class="fa-solid fa-utensils text-3xl mb-2"></i>
+			<h3 class="font-bold text-lg leading-tight">Restaurante Universitário</h3>
+			<p class="text-xs font-light text-white/80 mt-1 leading-tight">Cardápios e horário de
+				funcionamento
+			</p>
+		</a>
 
-			<a href="#"
-				class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
-				<i class="fa-solid fa-map-location-dot text-3xl mb-2"></i>
-				<h3 class="font-bold text-lg leading-tight">Os <my-font class="italic">CAMPI</my-font></h3>
-				<p class="text-xs font-light text-white/80 mt-1 leading-tight">Veja as unidades da UFSJ</p>
-			</a>
+		<a href="/carteirinha"
+			class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
+			<i class="fa-solid fa-id-card text-3xl mb-2"></i>
+			<h3 class="font-bold text-lg leading-tight">Carteirinha de Estudante</h3>
+			<p class="text-xs font-light text-white/80 mt-1 leading-tight">Solicite a sua já</p>
+		</a>
 
-			<a href="#"
-				class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
-				<i class="fa-solid fa-graduation-cap text-3xl mb-2"></i>
-				<h3 class="font-bold text-lg leading-tight">Cursos</h3>
-				<p class="text-xs font-light text-white/80 mt-1 leading-tight">Confira os cursos ofertados</p>
-			</a>
+		<a href="#" class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
+			<i class="fa-solid fa-book text-3xl mb-2"></i>
+			<h3 class="font-bold text-lg leading-tight">Bibliotecas</h3>
+			<p class="text-xs font-light text-white/80 mt-1 leading-tight">Acervo e horário de funcionamento</p>
+		</a>
 
-			<a href="#"
-				class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
-				<i class="fa-solid fa-phone text-3xl mb-2"></i>
-				<h3 class="font-bold text-lg leading-tight">Contato</h3>
-				<p class="text-xs font-light text-white/80 mt-1 leading-tight">Entre em contato</p>
-			</a>
+		<a href="#" class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
+			<i class="fa-solid fa-landmark text-3xl mb-2"></i>
+			<h3 class="font-bold text-[15px] leading-tight">Administração da Faculdade</h3>
+			<p class="text-xs font-light text-white/80 mt-1 leading-tight">Confira nossos departamentos</p>
+		</a>
 
-			<a href="#"
-				class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
-				<i class="fa-solid fa-globe text-3xl mb-2"></i>
-				<h3 class="font-bold text-lg leading-tight">Saiba mais</h3>
-				<p class="text-xs font-light text-white/80 mt-1 leading-tight">Acesse o site oficial da UFSJ</p>
-			</a>
+		<a href="#" class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
+			<i class="fa-solid fa-map-location-dot text-3xl mb-2"></i>
+			<h3 class="font-bold text-lg leading-tight">Os <my-font class="italic">CAMPI</my-font></h3>
+			<p class="text-xs font-light text-white/80 mt-1 leading-tight">Veja as unidades da UFSJ</p>
+		</a>
 
-		</div>
-	</main>
-</body>
+		<a href="#" class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
+			<i class="fa-solid fa-graduation-cap text-3xl mb-2"></i>
+			<h3 class="font-bold text-lg leading-tight">Cursos</h3>
+			<p class="text-xs font-light text-white/80 mt-1 leading-tight">Confira os cursos ofertados</p>
+		</a>
 
-</html>
+		<a href="#" class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
+			<i class="fa-solid fa-phone text-3xl mb-2"></i>
+			<h3 class="font-bold text-lg leading-tight">Contato</h3>
+			<p class="text-xs font-light text-white/80 mt-1 leading-tight">Entre em contato</p>
+		</a>
+
+		<a href="#" class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
+			<i class="fa-solid fa-globe text-3xl mb-2"></i>
+			<h3 class="font-bold text-lg leading-tight">Saiba mais</h3>
+			<p class="text-xs font-light text-white/80 mt-1 leading-tight">Acesse o site oficial da UFSJ</p>
+		</a>
+
+	</div>
+</LayoutBase>
