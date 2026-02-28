@@ -1,0 +1,79 @@
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+---
+
+<LayoutBase mostrarBotaoVoltar={true}>
+    <div class="flex flex-col gap-6">
+        <a href="https://biblioteca.ufsj.edu.br/" target="_blank" class="text-white bg-[#BC1823] rounded-[20px] p-6 flex justify-between items-center">
+            <div class="pr-4">
+                <h2 class="font-bold text-lg leading-tight mb-1">Acesse o acervo de livros</h2>
+                <p class="text-white/80 text-xs font-light leading-tight mt-2">Livros disponíveis de todas as bibliotecas da UFSJ</p>
+            </div>
+            <i class="fa-solid fa-arrow-right text-2xl"></i>
+        </a>
+
+        <div class="bg-gray-50 border border-gray-100 rounded-[20px] p-6 flex flex-col items-start">
+            <h3 class="text-sm text-gray-500 font-bold mb-5 uppercase">Horário de Funcionamento</h3>
+            <div class="flex flex-col gap-2 items-center px-2">
+
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-start gap-2">
+                        <div class="bg-red-100 text-[#C81D25] w-8 h-8 rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-clock text-[16px]"></i>
+                        </div>
+                        <div class="flex flex-col gap-0.5">
+                            <h4 class="font-bold">São João del-Rei</h4>
+                            <p class="text-xs text-gray-500 font-light leading-tight">Campi CSA, CDB e CTAN</p>
+                            <p class="text-xs text-gray-500 font-light leading-tight">8h às 22h</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-2">
+                        <div class="bg-red-100 text-[#C81D25] w-8 h-8 rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-clock text-[16px]"></i>
+                        </div>
+                        <div class="flex flex-col gap-0.5">
+                            <h4 class="font-bold">Divinópolis</h4>
+                            <p class="text-xs text-gray-500 font-light leading-tight">Campus CCO</p>
+                            <p class="text-xs text-gray-500 font-light leading-tight">7h às 19h</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-2">
+                        <div class="bg-red-100 text-[#C81D25] w-8 h-8 rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-clock text-[16px]"></i>
+                        </div>
+                        <div class="flex flex-col gap-0.5">
+                            <h4 class="font-bold">Ouro Branco</h4>
+                            <p class="text-xs text-gray-500 font-light leading-tight">Campus CAP</p>
+                            <p class="text-xs text-gray-500 font-light leading-tight">8h às 21h50</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-2">
+                        <div class="bg-red-100 text-[#C81D25] w-8 h-8 rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-clock text-[16px]"></i>
+                        </div>
+                        <div class="flex flex-col gap-0.5">
+                            <h4 class="font-bold">Sete Lagoas</h4>
+                            <p class="text-xs text-gray-500 font-light leading-tight">Campus CSL</p>
+                            <p class="text-xs text-gray-500 font-light leading-tight">7h30 às 17h</p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+
+            </div>
+        </div>
+
+        <a href="https://dibib.ufsj.edu.br/" target="_blank" class="text-white bg-[#BC1823] rounded-[20px] p-6 flex justify-between items-center">
+            <div class="pr-4">
+                <h2 class="font-bold text-lg leading-tight mb-1">UFSJ Bibliotecas (DIBIB)</h2>
+                <p class="text-white/80 text-xs font-light leading-tight mt-2">Acesso rápido</p>
+            </div>
+            <i class="fa-solid fa-arrow-right text-2xl"></i>
+        </a>
+    </div>
+    
+</LayoutBase>
