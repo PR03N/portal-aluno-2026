@@ -1,0 +1,38 @@
+[
+  {
+    "nome": "Campus Santo Antônio (CSA)",
+    "localizacao": "São João del-Rei - MG",
+    "mapa": "https://maps.google.com/?q=Campus+Santo+Antonio+UFSJ",
+    "cursos": "Engenharia de Produção, Engenharia Elétrica, Engenharia Mecânica, Física, Matemática, Química."
+  },
+  {
+    "nome": "Campus Dom Bosco (CDB)",
+    "localizacao": "São João del-Rei - MG",
+    "mapa": "https://maps.google.com/?q=Campus+Dom+Bosco+UFSJ",
+    "cursos": "Biociências, Filosofia, Letras, Pedagogia, Psicologia, Medicina, Enfermagem."
+  },
+  {
+    "nome": "Campus Tancredo Neves (CTAN)",
+    "localizacao": "São João del-Rei - MG",
+    "mapa": "https://maps.google.com/?q=Campus+Tancredo+Neves+UFSJ",
+    "cursos": "Administração, Arquitetura e Urbanismo, Ciências Contábeis, Ciências Econômicas, Educação Física, Geografia, História."
+  },
+  {
+    "nome": "Campus Alto Paraopeba (CAP)",
+    "localizacao": "Ouro Branco / Congonhas - MG",
+    "mapa": "https://maps.google.com/?q=Campus+Alto+Paraopeba+UFSJ",
+    "cursos": "Engenharia Civil, Engenharia de Bioprocessos, Engenharia de Telecomunicações, Engenharia Mecatrônica, Engenharia Química."
+  },
+  {
+    "nome": "Campus Centro-Oeste Dona Lindu (CCO)",
+    "localizacao": "Divinópolis - MG",
+    "mapa": "https://maps.google.com/?q=Campus+Centro-Oeste+Dona+Lindu+UFSJ",
+    "cursos": "Bioquímica, Enfermagem, Farmácia, Medicina."
+  },
+  {
+    "nome": "Campus Sete Lagoas (CSL)",
+    "localizacao": "Sete Lagoas - MG",
+    "mapa": "https://maps.google.com/?q=Campus+Sete+Lagoas+UFSJ",
+    "cursos": "Agronomia, Engenharia de Alimentos, Engenharia de Biossistemas, Engenharia Florestal."
+  }
+]
