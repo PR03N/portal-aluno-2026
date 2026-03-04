@@ -1,38 +1,395 @@
 [
   {
-    "nome": "Campus Santo Antônio (CSA)",
+    "campus": "Campus Santo Antônio (CSA)",
     "localizacao": "São João del-Rei - MG",
-    "mapa": "https://maps.google.com/?q=Campus+Santo+Antonio+UFSJ",
-    "cursos": "Engenharia de Produção, Engenharia Elétrica, Engenharia Mecânica, Física, Matemática, Química."
+    "cursos": [
+      {
+        "nome": "Engenharia de Energia",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/coene/"
+      },
+      {
+        "nome": "Engenharia de Produção",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/coenp/"
+      },
+      {
+        "nome": "Engenharia Elétrica",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/coele/"
+      },
+      {
+        "nome": "Engenharia Mecânica",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/comec/"
+      },
+      {
+        "nome": "Matemática (Bacharelado)",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/comat/"
+      },
+      {
+        "nome": "Matemática (Licenciatura)",
+        "modalidade": "Licenciatura",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/comat/"
+      }
+    ]
   },
   {
-    "nome": "Campus Dom Bosco (CDB)",
+    "campus": "Campus Dom Bosco (CDB)",
     "localizacao": "São João del-Rei - MG",
-    "mapa": "https://maps.google.com/?q=Campus+Dom+Bosco+UFSJ",
-    "cursos": "Biociências, Filosofia, Letras, Pedagogia, Psicologia, Medicina, Enfermagem."
+    "cursos": [
+      {
+        "nome": "Biotecnologia",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://www.ufsj.edu.br/cobit/"
+      },
+      {
+        "nome": "Ciências Biológicas (Bacharelado)",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/cobio/"
+      },
+      {
+        "nome": "Ciências Biológicas (Licenciatura)",
+        "modalidade": "Licenciatura",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/cobio/"
+      },
+      {
+        "nome": "Filosofia (Bacharelado)",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/cofil/"
+      },
+      {
+        "nome": "Filosofia (Licenciatura)",
+        "modalidade": "Licenciatura",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/cofil/"
+      },
+      {
+        "nome": "Física (Bacharelado)",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/cofis/"
+      },
+      {
+        "nome": "Física (Licenciatura)",
+        "modalidade": "Licenciatura",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/cofis/"
+      },
+      {
+        "nome": "História (Bacharelado)",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/cohis/"
+      },
+      {
+        "nome": "História (Licenciatura)",
+        "modalidade": "Licenciatura",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/cohis/"
+      },
+      {
+        "nome": "Letras (Licenciatura)",
+        "modalidade": "Licenciatura",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/colet/"
+      },
+      {
+        "nome": "Letras - Língua Inglesa (Licenciatura)",
+        "modalidade": "Licenciatura",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/colil/"
+      },
+      {
+        "nome": "Medicina",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/cmedi/"
+      },
+      {
+        "nome": "Pedagogia",
+        "modalidade": "Licenciatura",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/coped/"
+      },
+      {
+        "nome": "Psicologia",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/copsi/"
+      },
+      {
+        "nome": "Química (Bacharelado)",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/coqui/"
+      },
+      {
+        "nome": "Química (Licenciatura)",
+        "modalidade": "Licenciatura",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/coqui/"
+      }
+    ]
   },
   {
-    "nome": "Campus Tancredo Neves (CTAN)",
+    "campus": "Campus Tancredo Neves (CTAN)",
     "localizacao": "São João del-Rei - MG",
-    "mapa": "https://maps.google.com/?q=Campus+Tancredo+Neves+UFSJ",
-    "cursos": "Administração, Arquitetura e Urbanismo, Ciências Contábeis, Ciências Econômicas, Educação Física, Geografia, História."
+    "cursos": [
+      {
+        "nome": "Administração",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/coadm/"
+      },
+      {
+        "nome": "Arquitetura e Urbanismo",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/arquitetura/"
+      },
+      {
+        "nome": "Artes Aplicadas",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/artes/"
+      },
+      {
+        "nome": "Ciência da Computação",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://sigaa.ufsj.edu.br/sigaa/public/curso/portal.jsf?id=16471979&lc=pt_BR&nivel=G"
+      },
+      {
+        "nome": "Ciências Contábeis",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/cocic/"
+      },
+      {
+        "nome": "Ciências Econômicas",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/coeco/"
+      },
+      {
+        "nome": "Comunicação Social - Jornalismo",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/jornalismo/"
+      },
+      {
+        "nome": "Educação Física (Bacharelado)",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/coefi/"
+      },
+      {
+        "nome": "Educação Física (Licenciatura)",
+        "modalidade": "Licenciatura",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/coefi/"
+      },
+      {
+        "nome": "Geografia (Bacharelado)",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/cogeo/"
+      },
+      {
+        "nome": "Geografia (Licenciatura)",
+        "modalidade": "Licenciatura",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/cogeo/"
+      },
+      {
+        "nome": "Música (Licenciatura)",
+        "modalidade": "Licenciatura",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/cmusi/"
+      },
+      {
+        "nome": "Teatro (Bacharelado)",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/teatro/"
+      },
+      {
+        "nome": "Teatro (Licenciatura)",
+        "modalidade": "Licenciatura",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/teatro/"
+      },
+      {
+        "nome": "Zootecnia",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/cozoo/"
+      }
+    ]
   },
   {
-    "nome": "Campus Alto Paraopeba (CAP)",
-    "localizacao": "Ouro Branco / Congonhas - MG",
-    "mapa": "https://maps.google.com/?q=Campus+Alto+Paraopeba+UFSJ",
-    "cursos": "Engenharia Civil, Engenharia de Bioprocessos, Engenharia de Telecomunicações, Engenharia Mecatrônica, Engenharia Química."
+    "campus": "Campus Alto Paraopeba (CAP)",
+    "localizacao": "Ouro Branco - MG",
+    "cursos": [
+      {
+        "nome": "Engenharia Civil",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/ccivi/"
+      },
+      {
+        "nome": "Engenharia da Computação e Inteligência Artificial",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://cecia.ufsj.edu.br/"
+      },
+      {
+        "nome": "Engenharia de Bioprocessos",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/cbiop/"
+      },
+      {
+        "nome": "Engenharia de Telecomunicações",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/ctele/"
+      },
+      {
+        "nome": "Engenharia Mecatrônica",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://www.ufsj.edu.br/cemec/"
+      },
+      {
+        "nome": "Engenharia Química",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/cquim/"
+      }
+    ]
   },
   {
-    "nome": "Campus Centro-Oeste Dona Lindu (CCO)",
+    "campus": "Campus Centro-Oeste Dona Lindu (CCO)",
     "localizacao": "Divinópolis - MG",
-    "mapa": "https://maps.google.com/?q=Campus+Centro-Oeste+Dona+Lindu+UFSJ",
-    "cursos": "Bioquímica, Enfermagem, Farmácia, Medicina."
+    "cursos": [
+      {
+        "nome": "Bioquímica",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/cobqi/"
+      },
+      {
+        "nome": "Enfermagem",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/coenf/"
+      },
+      {
+        "nome": "Farmácia",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/cofar/"
+      },
+      {
+        "nome": "Medicina",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/comed/"
+      }
+    ]
   },
   {
-    "nome": "Campus Sete Lagoas (CSL)",
+    "campus": "Campus Sete Lagoas (CSL)",
     "localizacao": "Sete Lagoas - MG",
-    "mapa": "https://maps.google.com/?q=Campus+Sete+Lagoas+UFSJ",
-    "cursos": "Agronomia, Engenharia de Alimentos, Engenharia de Biossistemas, Engenharia Florestal."
+    "cursos": [
+      {
+        "nome": "Engenharia Agronômica",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/ceagr/"
+      },
+      {
+        "nome": "Engenharia de Alimentos",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/ceali/"
+      },
+      {
+        "nome": "Engenharia Florestal",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/ceflo/"
+      },
+      {
+        "nome": "Interdisciplinar em Biossistemas",
+        "modalidade": "Bacharelado",
+        "turno": "",
+        "descricao": "",
+        "linkSite": "https://ufsj.edu.br/cobib/"
+      }
+    ]
   }
 ]
