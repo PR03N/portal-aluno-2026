@@ -40,7 +40,7 @@
   },
   {
     "tipo": "padrao",
-    "link": "#",
+    "link": "/academico",
     "target": "_self",
     "icone": "fa-landmark",
     "titulo": "Administração da Faculdade",
@@ -65,7 +65,7 @@
   },
   {
     "tipo": "padrao",
-    "link": "#",
+    "link": "/contato",
     "target": "_self",
     "icone": "fa-phone",
     "titulo": "Contato",
@@ -73,8 +73,8 @@
   },
   {
     "tipo": "padrao",
-    "link": "#",
-    "target": "_self",
+    "link": "https://ufsj.edu.br/",
+    "target": "_blank",
     "icone": "fa-globe",
     "titulo": "Saiba mais",
     "subtitulo": "Acesse o site oficial da UFSJ"
