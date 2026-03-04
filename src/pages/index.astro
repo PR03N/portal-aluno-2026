@@ -1,91 +1,63 @@
 ---
 import LayoutBase from '../layouts/LayoutBase.astro';
+import dadosInicio from '../data/main_menu.json';
 ---
 
 <LayoutBase mostrarBotaoVoltar={false}>
-	<script src="../scripts/calendario.js"></script>
+    <script src="../scripts/calendario.js"></script>
 
-	<div class="grid grid-cols-2 gap-3 max-w-100 mx-auto">
+    <div class="grid grid-cols-2 gap-3 max-w-100 mx-auto">
+        
+        {dadosInicio.map((item) => {
+            
+            // Renderiza o Layout Especial do Calendário
+            if (item.tipo === 'calendario') {
+                return (
+                    <a href={item.link} target={item.target} class="col-span-2 bg-[#BC1823] text-white rounded-[20px] p-5">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="flex gap-3 items-center">
+                                <i class={`fa-solid ${item.icone} text-3xl`}></i>
+                                <div>
+                                    <h2 class="font-bold text-lg">{item.titulo}</h2>
+                                    <p class="text-xs text-white/80 font-light">{item.subtitulo}</p>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-arrow-right text-xl"></i>
+                        </div>
+                        <div id="lista-calendario" class="ml-3 mt-4 flex flex-col">
+                            <p class="text-white/70 text-[13px] animate-pulse">Carregando datas do calendário...</p>
+                        </div>
+                    </a>
+                );
+            }
 
-		<a href="https://ufsj.edu.br/portal2-repositorio/File/soces/Calendario%20Academico%202026%20CONEP.pdf"
-			target="_blank" class="col-span-2 bg-[#BC1823] text-white rounded-[20px] p-5">
-			<div class="flex justify-between items-start mb-4">
-				<div class="flex gap-3 items-center">
-					<i class="fa-solid fa-calendar text-3xl"></i>
-					<div>
-						<h2 class="font-bold text-lg">Calendário Acadêmico</h2>
-						<p class="text-xs text-white/80 font-light">2026</p>
-					</div>
-				</div>
-				<i class="fa-solid fa-arrow-right text-xl"></i>
-			</div>
+            // Renderiza o Layout Horizontal de Destaque (ex: SIGAA)
+            if (item.tipo === 'destaque') {
+                return (
+                    <a href={item.link} target={item.target} class="col-span-2 bg-[#BC1823] text-white rounded-[20px] p-5 flex justify-between items-center">
+                        <div>
+                            <h2 class="font-bold text-2xl leading-tight">{item.titulo}</h2>
+                            <p class="text-xs font-light text-white/80 mt-1">{item.subtitulo}</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-right text-xl"></i>
+                    </a>
+                );
+            }
 
-			<div id="lista-calendario" class="ml-3 mt-4 flex flex-col">
-				<p class="text-white/70 text-[13px] animate-pulse">Carregando datas do calendário...</p>
-			</div>
+            // Renderiza os Cards Quadrados Padrões (1 coluna)
+            if (item.tipo === 'padrao') {
+                // Aplica text-lg por padrão, ou a classe customizada caso exista no JSON (para evitar quebra em textos longos)
+                const tamanhoTitulo = item.classeTitulo || "text-lg";
 
-		</a>
+                return (
+                    <a href={item.link} target={item.target} class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
+                        <i class={`fa-solid ${item.icone} text-3xl mb-2`}></i>
+                        <h3 class={`font-bold ${tamanhoTitulo} leading-tight`} set:html={item.titulo} />
+                        <p class="text-xs font-light text-white/80 mt-1 leading-tight">{item.subtitulo}</p>
+                    </a>
+                );
+            }
+        })}
 
-		<a href="https://sigaa.ufsj.edu.br/sigaa/" target="_blank"
-			class="col-span-2 bg-[#BC1823] text-white rounded-[20px] p-5 flex justify-between items-center">
-			<div>
-				<h2 class="font-bold text-2xl leading-tight">SIGAA</h2>
-				<p class="text-xs font-light text-white/80 mt-1">Acesso rápido</p>
-			</div>
-			<i class="fa-solid fa-arrow-right text-xl"></i>
-		</a>
-
-		<a href="/ru"
-			class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
-			<i class="fa-solid fa-utensils text-3xl mb-2"></i>
-			<h3 class="font-bold text-lg leading-tight">Restaurante Universitário</h3>
-			<p class="text-xs font-light text-white/80 mt-1 leading-tight">Cardápios e horário de
-				funcionamento
-			</p>
-		</a>
-
-		<a href="/carteirinha"
-			class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
-			<i class="fa-solid fa-id-card text-3xl mb-2"></i>
-			<h3 class="font-bold text-lg leading-tight">Carteirinha de Estudante</h3>
-			<p class="text-xs font-light text-white/80 mt-1 leading-tight">Solicite a sua já</p>
-		</a>
-
-		<a href="/biblioteca" class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
-			<i class="fa-solid fa-book text-3xl mb-2"></i>
-			<h3 class="font-bold text-lg leading-tight">Bibliotecas</h3>
-			<p class="text-xs font-light text-white/80 mt-1 leading-tight">Acervo e horário de funcionamento</p>
-		</a>
-
-		<a href="#" class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
-			<i class="fa-solid fa-landmark text-3xl mb-2"></i>
-			<h3 class="font-bold text-[15px] leading-tight">Administração da Faculdade</h3>
-			<p class="text-xs font-light text-white/80 mt-1 leading-tight">Confira nossos departamentos</p>
-		</a>
-
-		<a href="/campi" class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
-			<i class="fa-solid fa-map-location-dot text-3xl mb-2"></i>
-			<h3 class="font-bold text-lg leading-tight">Os <my-font class="italic">CAMPI</my-font></h3>
-			<p class="text-xs font-light text-white/80 mt-1 leading-tight">Veja as unidades da UFSJ</p>
-		</a>
-
-		<a href="/cursos" class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
-			<i class="fa-solid fa-graduation-cap text-3xl mb-2"></i>
-			<h3 class="font-bold text-lg leading-tight">Cursos</h3>
-			<p class="text-xs font-light text-white/80 mt-1 leading-tight">Confira os cursos ofertados</p>
-		</a>
-
-		<a href="#" class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
-			<i class="fa-solid fa-phone text-3xl mb-2"></i>
-			<h3 class="font-bold text-lg leading-tight">Contato</h3>
-			<p class="text-xs font-light text-white/80 mt-1 leading-tight">Entre em contato</p>
-		</a>
-
-		<a href="#" class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
-			<i class="fa-solid fa-globe text-3xl mb-2"></i>
-			<h3 class="font-bold text-lg leading-tight">Saiba mais</h3>
-			<p class="text-xs font-light text-white/80 mt-1 leading-tight">Acesse o site oficial da UFSJ</p>
-		</a>
-
-	</div>
+    </div>
 </LayoutBase>

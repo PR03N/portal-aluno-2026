@@ -1,0 +1,82 @@
+[
+  {
+    "tipo": "calendario",
+    "link": "https://ufsj.edu.br/portal2-repositorio/File/soces/Calendario%20Academico%202026%20CONEP.pdf",
+    "target": "_blank",
+    "icone": "fa-calendar",
+    "titulo": "Calendário Acadêmico",
+    "subtitulo": "2026"
+  },
+  {
+    "tipo": "destaque",
+    "link": "https://sigaa.ufsj.edu.br/sigaa/",
+    "target": "_blank",
+    "titulo": "SIGAA",
+    "subtitulo": "Acesso rápido"
+  },
+  {
+    "tipo": "padrao",
+    "link": "/ru",
+    "target": "_self",
+    "icone": "fa-utensils",
+    "titulo": "Restaurante Universitário",
+    "subtitulo": "Cardápios e horário de funcionamento"
+  },
+  {
+    "tipo": "padrao",
+    "link": "/carteirinha",
+    "target": "_self",
+    "icone": "fa-id-card",
+    "titulo": "Carteirinha de Estudante",
+    "subtitulo": "Solicite a sua já"
+  },
+  {
+    "tipo": "padrao",
+    "link": "/biblioteca",
+    "target": "_self",
+    "icone": "fa-book",
+    "titulo": "Bibliotecas",
+    "subtitulo": "Acervo e horário de funcionamento"
+  },
+  {
+    "tipo": "padrao",
+    "link": "#",
+    "target": "_self",
+    "icone": "fa-landmark",
+    "titulo": "Administração da Faculdade",
+    "subtitulo": "Confira nossos departamentos",
+    "classeTitulo": "text-[15px]"
+  },
+  {
+    "tipo": "padrao",
+    "link": "/campi",
+    "target": "_self",
+    "icone": "fa-map-location-dot",
+    "titulo": "Os <my-font class='italic'>CAMPI</my-font>",
+    "subtitulo": "Veja as unidades da UFSJ"
+  },
+  {
+    "tipo": "padrao",
+    "link": "/cursos",
+    "target": "_self",
+    "icone": "fa-graduation-cap",
+    "titulo": "Cursos",
+    "subtitulo": "Confira os cursos ofertados"
+  },
+  {
+    "tipo": "padrao",
+    "link": "#",
+    "target": "_self",
+    "icone": "fa-phone",
+    "titulo": "Contato",
+    "subtitulo": "Entre em contato"
+  },
+  {
+    "tipo": "padrao",
+    "link": "#",
+    "target": "_self",
+    "icone": "fa-globe",
+    "titulo": "Saiba mais",
+    "subtitulo": "Acesse o site oficial da UFSJ"
+  }
+]
