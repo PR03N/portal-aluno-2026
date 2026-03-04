@@ -3,8 +3,6 @@ Planilha usada para configurar o calendário disponível em: https://docs.google
 
 Para que outros eventos e datas fiquem disponíveis na página principal é necessário remover as linhas de datas passadas
 
-Caso queira adicionar uma categoria nova para ser mostrada no calendário, apenas adicione a categoria (em lowercase) no "return"
-
 Limitei para aparecerem apenas 4 datas, caso queira mais, altere o slice
 */
 
@@ -17,17 +15,11 @@ async function carregarCalendario() {
   try {
     const resposta = await fetch(url);
     const todosEventos = await resposta.json();
-    const eventosFiltrados = todosEventos.filter((evento) => {
-      if (!evento.Categoria) return false;
-      const categoria = evento.Categoria.toLowerCase();
-
-      return categoria.includes("acadêmico") || categoria.includes("evento"); // Adicione mais categorias aqui! Ex: categoria.includes("acadêmico") || categoria.includes("evento") || categoria.includes("feriado") || categoria.includes("recesso");
-    });
-    const eventosLimitados = eventosFiltrados.slice(0, 4); // Limite de datas
+    const eventos = todosEventos.slice(0, 4); // Limite de datas
     const container = document.getElementById("lista-calendario");
     container.innerHTML = "";
-    eventosLimitados.forEach((evento, index) => {
-      const eOUltimoItem = index === eventosLimitados.length - 1;
+    eventos.forEach((evento, index) => {
+      const eOUltimoItem = index === eventos.length - 1;
       const itemHTML = `
         <div class="flex gap-3">
           <div class="flex flex-col items-center">
@@ -44,7 +36,7 @@ async function carregarCalendario() {
 
       container.innerHTML += itemHTML;
     });
-    if (eventosLimitados.length === 0) {
+    if (eventos.length === 0) {
       container.innerHTML =
         '<p class="text-white/70 text-[13px] mt-2">Nenhum evento próximo.</p>';
     }
