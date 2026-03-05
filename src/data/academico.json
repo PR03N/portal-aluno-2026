@@ -11,7 +11,9 @@
     "descricao": "A PROEN é o órgão responsável por planejar, formular, implementar e coordenar as políticas para o ensino de graduação na UFSJ.",
     "topicos": [
       "Bolsa Programa de Educação Tutorial (PET)",
-      "Bolsa de Monitoria"
+      "Bolsa de Monitoria",
+      "Apoio à realização das Semanas Acadêmicas",
+      "Mostra de Cursos"
     ]
   },
   {
@@ -19,7 +21,11 @@
     "sigla": "PROEX",
     "icone": "fa-people-group",
     "descricao": "A PROEX é responsável pela gestão das atividades de extensão universitária da UFSJ e sua relação com a comunidade, além de coordenar as ações artísticas e culturais.",
-    "topicos": ["Bolsa de Extensão", "Inverno Cultural UFSJ"]
+    "topicos": [
+      "Bolsa de Extensão",
+      "Inverno Cultural UFSJ",
+      "Centro Cultural UFSJ"
+    ]
   },
   {
     "titulo": "Pró-Reitoria de Pesquisa e Pós-Graduação",
