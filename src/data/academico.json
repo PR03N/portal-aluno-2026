@@ -1,0 +1,66 @@
+[
+  {
+    "titulo": "Reitoria",
+    "icone": "fa-building-columns",
+    "descricao": "É o órgão de administração geral que coordena, executa e supervisiona todas as atividades da Universidade, cumprindo e fazendo cumprir as leis e as deliberações dos Conselhos Superiores."
+  },
+  {
+    "titulo": "Pró-Reitoria de Ensino de Graduação",
+    "sigla": "PROEN",
+    "icone": "fa-chalkboard-user",
+    "descricao": "A PROEN é o órgão responsável por planejar, formular, implementar e coordenar as políticas para o ensino de graduação na UFSJ.",
+    "topicos": [
+      "Bolsa Programa de Educação Tutorial (PET)",
+      "Bolsa de Monitoria"
+    ]
+  },
+  {
+    "titulo": "Pró-Reitoria de Extensão e Cultura",
+    "sigla": "PROEX",
+    "icone": "fa-people-group",
+    "descricao": "A PROEX é responsável pela gestão das atividades de extensão universitária da UFSJ e sua relação com a comunidade, além de coordenar as ações artísticas e culturais.",
+    "topicos": ["Bolsa de Extensão", "Inverno Cultural UFSJ"]
+  },
+  {
+    "titulo": "Pró-Reitoria de Pesquisa e Pós-Graduação",
+    "sigla": "PROPE",
+    "icone": "fa-flask",
+    "descricao": "A PROPE é o órgão responsável pela gestão institucional da pesquisa e da pós-graduação.",
+    "topicos": ["Bolsa de Iniciação Científica"]
+  },
+  {
+    "titulo": "Pró-Reitoria de Assuntos Estudantis",
+    "sigla": "PROAE",
+    "icone": "fa-hand-holding-heart",
+    "descricao": "Responsável pela gestão dos programas e projetos que visam propor políticas de assistência e ações afirmativas, de permanência, de saúde e atividades esportivas, culturais e sociais dirigidas aos estudantes.",
+    "topicos": [
+      "Auxílio de Promoção Socioacadêmica (PASE)",
+      "Assistência à saúde do discente",
+      "Auxílio Creche",
+      "Moradia Estudantil",
+      "Programa Saúde Menstrual",
+      "Restaurantes Universitários"
+    ]
+  },
+  {
+    "titulo": "Divisão de Acompanhamento e Controle Acadêmico",
+    "sigla": "DICON",
+    "icone": "fa-file-signature",
+    "descricao": "Órgão que tem o papel de organizar, supervisionar e executar os processos de admissão, registro e controle acadêmico, acompanhando a vida acadêmica dos discentes desde o seu ingresso."
+  },
+  {
+    "titulo": "Departamentos",
+    "icone": "fa-sitemap",
+    "descricao": "Os Departamentos são responsáveis pela organização e distribuição de professores para lecionar as disciplinas."
+  },
+  {
+    "titulo": "Coordenadorias",
+    "icone": "fa-users-gear",
+    "descricao": "As Coordenadorias são órgãos executivos de deliberações referentes à organização e funcionamento dos cursos de graduação. É o setor com o qual o estudante terá mais contato para orientar sua vida acadêmica."
+  },
+  {
+    "titulo": "Colegiado de Curso",
+    "icone": "fa-gavel",
+    "descricao": "O Colegiado é o órgão responsável pela fixação das diretrizes didático-pedagógicas do curso, bem como pela definição do perfil acadêmico-profissional do estudante."
+  }
+]
