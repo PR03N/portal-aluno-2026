@@ -7,13 +7,16 @@ import dadosInicio from '../data/main_menu.json';
     <script src="../scripts/calendario.js"></script>
 
     <div class="grid grid-cols-2 gap-3 max-w-100 mx-auto">
-        
         {dadosInicio.map((item) => {
-            
-            // Renderiza o Layout Especial do Calendário
+            // Renderização condicional: pula o item se não houver link definido
+            if (!item.link) return null;
+
+            // Segurança dinâmica para links externos
+            const relAttr = item.target === '_blank' ? 'noopener noreferrer' : undefined;
+
             if (item.tipo === 'calendario') {
                 return (
-                    <a href={item.link} target={item.target} class="col-span-2 bg-[#BC1823] text-white rounded-[20px] p-5">
+                    <a href={item.link} target={item.target} rel={relAttr} class="col-span-2 bg-[#BC1823] text-white rounded-[20px] p-5">
                         <div class="flex justify-between items-start mb-4">
                             <div class="flex gap-3 items-center">
                                 <i class={`fa-solid ${item.icone} text-3xl`}></i>
@@ -31,10 +34,9 @@ import dadosInicio from '../data/main_menu.json';
                 );
             }
 
-            // Renderiza o Layout Horizontal de Destaque (ex: SIGAA)
             if (item.tipo === 'destaque') {
                 return (
-                    <a href={item.link} target={item.target} class="col-span-2 bg-[#BC1823] text-white rounded-[20px] p-5 flex justify-between items-center">
+                    <a href={item.link} target={item.target} rel={relAttr} class="col-span-2 bg-[#BC1823] text-white rounded-[20px] p-5 flex justify-between items-center">
                         <div>
                             <h2 class="font-bold text-2xl leading-tight">{item.titulo}</h2>
                             <p class="text-xs font-light text-white/80 mt-1">{item.subtitulo}</p>
@@ -44,13 +46,10 @@ import dadosInicio from '../data/main_menu.json';
                 );
             }
 
-            // Renderiza os Cards Quadrados Padrões (1 coluna)
             if (item.tipo === 'padrao') {
-                // Aplica text-lg por padrão, ou a classe customizada caso exista no JSON (para evitar quebra em textos longos)
                 const tamanhoTitulo = (item as any).classeTitulo || "text-lg";
-
                 return (
-                    <a href={item.link} target={item.target} class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
+                    <a href={item.link} target={item.target} rel={relAttr} class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
                         <i class={`fa-solid ${item.icone} text-3xl mb-2`}></i>
                         <h3 class={`font-bold ${tamanhoTitulo} leading-tight`} set:html={item.titulo} />
                         <p class="text-xs font-light text-white/80 mt-1 leading-tight">{item.subtitulo}</p>
@@ -58,6 +57,5 @@ import dadosInicio from '../data/main_menu.json';
                 );
             }
         })}
-
     </div>
 </LayoutBase>
