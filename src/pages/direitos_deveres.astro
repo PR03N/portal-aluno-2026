@@ -21,7 +21,7 @@ import dadosRegimento from '../data/direitos_deveres.json';
                 </p>
                 <div class="flex flex-wrap gap-2">
                     {dadosRegimento.documentos.map((doc) => (
-                        <a href={doc.url} target="_blank" class="bg-white border border-red-100 text-[#BC1823] px-3 py-1.5 rounded-lg text-[11px] font-bold shadow-sm flex items-center gap-1.5 hover:bg-red-100 transition-colors">
+                        <a href={doc.url} target="_blank" class="bg-white border border-red-100 text-[#BC1823] px-3 py-1.5 rounded-lg text-[11px] font-bold shadow-sm flex items-center gap-1.5">
                             <i class="fa-solid fa-download"></i> {doc.titulo}
                         </a>
                     ))}
@@ -42,7 +42,7 @@ import dadosRegimento from '../data/direitos_deveres.json';
                         {sessao.itens.map((item) => (
                             <details class="group bg-gray-50 border border-gray-100 rounded-[20px] shadow-sm overflow-hidden [&::-webkit-details-marker]:hidden">
                                 
-                                <summary class="cursor-pointer p-4 flex justify-between items-center outline-none hover:bg-gray-100/50 transition-colors">
+                                <summary class="cursor-pointer p-4 flex justify-between items-center outline-none">
                                     <span class="font-bold text-gray-700 text-[13px] pr-4 leading-tight">{item.titulo}</span>
                                     <i class="fa-solid fa-chevron-down text-[#BC1823] group-open:rotate-180 transition-transform duration-300 shrink-0"></i>
                                 </summary>
