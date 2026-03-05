@@ -1,14 +1,15 @@
 ---
 import LayoutBase from '../layouts/LayoutBase.astro';
+import dadosCarteirinha from '../data/carteirinha.json';
 ---
 
 <LayoutBase mostrarBotaoVoltar={true}>
-    <div class="flex flex-col gap-4 max-w-100 mx-auto">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScbpWfrOxuOOSxMuS4bTb8uDWSe-iotcgkvl6L1ZYvmvB5XPQ/viewform"
-            target="_blank" class="bg-[#BC1823] text-white rounded-[20px] p-6 flex justify-between items-center">
+    <div class="flex flex-col gap-4 max-w-100 mx-auto pb-6">
+        
+        <a href={dadosCarteirinha.solicitacao.url} target="_blank" class="bg-[#BC1823] text-white rounded-[20px] p-6 flex justify-between items-center group">
             <div class="pr-4">
-                <h2 class="font-bold text-lg leading-tight mb-1">Solicitação de Carteirinha de Estudante</h2>
-                <p class="text-white/80 text-xs font-light leading-tight mt-2">Solicite sua carteirinha</p>
+                <h2 class="font-bold text-lg leading-tight mb-1">{dadosCarteirinha.solicitacao.titulo}</h2>
+                <p class="text-white/80 text-xs font-light leading-tight mt-2">{dadosCarteirinha.solicitacao.subtitulo}</p>
             </div>
             <i class="fa-solid fa-arrow-right text-2xl group-hover:translate-x-1 transition-transform"></i>
         </a>
@@ -18,28 +19,14 @@ import LayoutBase from '../layouts/LayoutBase.astro';
                 <i class="fa-solid fa-location-dot text-[#BC1823]"></i>Onde usar
             </h3>
             <div class="flex justify-evenly items-center px-2">
-
-                <div class="flex flex-col items-center gap-2">
-                    <div class="bg-red-100 text-[#BC1823] w-12 h-12 rounded-full flex items-center justify-center">
-                        <i class="fa-solid fa-utensils text-xl"></i>
+                {dadosCarteirinha.locaisDeUso.map((local) => (
+                    <div class="flex flex-col items-center gap-2">
+                        <div class="bg-red-100 text-[#BC1823] w-12 h-12 rounded-full flex items-center justify-center">
+                            <i class={`fa-solid ${local.icone} text-xl`}></i>
+                        </div>
+                        <span class="text-[11px] font-bold text-gray-700 uppercase">{local.rotulo}</span>
                     </div>
-                    <span class="text-[11px] font-bold text-gray-700">RUs</span>
-                </div>
-
-                <div class="flex flex-col items-center gap-2">
-                    <div class="bg-red-100 text-[#BC1823] w-12 h-12 rounded-full flex items-center justify-center">
-                        <i class="fa-solid fa-book text-xl"></i>
-                    </div>
-                    <span class="text-[11px] font-bold text-gray-700 uppercase">Bibliotecas</span>
-                </div>
-
-                <div class="flex flex-col items-center gap-2">
-                    <div class="bg-red-100 text-[#BC1823] w-12 h-12 rounded-full flex items-center justify-center">
-                        <i class="fa-solid fa-calendar-check text-xl"></i>
-                    </div>
-                    <span class="text-[11px] font-bold text-gray-700 uppercase">Eventos</span>
-                </div>
-
+                ))}
             </div>
         </div>
 
@@ -47,16 +34,13 @@ import LayoutBase from '../layouts/LayoutBase.astro';
             <h3 class="text-sm text-gray-500 font-bold mb-5 flex items-center gap-2 uppercase tracking-wide">
                 <i class="fa-solid fa-circle-info text-[#BC1823]"></i> Importante
             </h3>
-
-            <p class="text-[14px] text-gray-700 leading-relaxed font-medium">
-                A Carteirinha Estudantil é indispensável para a sua rotina na UFSJ. Usada para a realização de
-                empréstimos de livros nas bibliotecas, ela também agiliza o seu dia a dia nos Restaurantes
-                Universitários (RUs).
-            </p>
-            <p class="text-[14px] text-gray-700 leading-relaxed font-medium">
-                <my-font class="text-[#BC1823]">Dica prática</my-font>: Insira créditos na sua carteirinha
-                antecipadamente para garantir um acesso muito mais rápido e evitar filas nos horários de pico.
-            </p>
+            
+            <div class="flex flex-col gap-4">
+                {dadosCarteirinha.informacoesImportantes.map((paragrafo) => (
+                    <p class="text-[14px] text-gray-700 leading-relaxed font-medium" set:html={paragrafo} />
+                ))}
+            </div>
+            
         </div>
     </div>
 </LayoutBase>

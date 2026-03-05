@@ -1,0 +1,34 @@
+{
+  "linkAcervo": {
+    "titulo": "Acesse o acervo de livros",
+    "subtitulo": "Livros disponíveis de todas as bibliotecas da UFSJ",
+    "url": "https://biblioteca.ufsj.edu.br/"
+  },
+  "linkRapido": {
+    "titulo": "UFSJ Bibliotecas (DIBIB)",
+    "subtitulo": "Acesso rápido",
+    "url": "https://dibib.ufsj.edu.br/"
+  },
+  "horarios": [
+    {
+      "cidade": "São João del-Rei",
+      "campi": "Campi CSA, CDB e CTAN",
+      "horario": "8h às 22h"
+    },
+    {
+      "cidade": "Divinópolis",
+      "campi": "Campus CCO",
+      "horario": "7h às 19h"
+    },
+    {
+      "cidade": "Ouro Branco",
+      "campi": "Campus CAP",
+      "horario": "8h às 21h50"
+    },
+    {
+      "cidade": "Sete Lagoas",
+      "campi": "Campus CSL",
+      "horario": "7h30 às 17h"
+    }
+  ]
+}

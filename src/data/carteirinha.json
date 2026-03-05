@@ -1,0 +1,16 @@
+{
+  "solicitacao": {
+    "titulo": "Solicitação de Carteirinha de Estudante",
+    "subtitulo": "Solicite sua carteirinha",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLScbpWfrOxuOOSxMuS4bTb8uDWSe-iotcgkvl6L1ZYvmvB5XPQ/viewform"
+  },
+  "locaisDeUso": [
+    { "icone": "fa-utensils", "rotulo": "RUs" },
+    { "icone": "fa-book", "rotulo": "Bibliotecas" },
+    { "icone": "fa-calendar-check", "rotulo": "Eventos" }
+  ],
+  "informacoesImportantes": [
+    "A Carteirinha Estudantil é indispensável para a sua rotina na UFSJ. Usada para a realização de empréstimos de livros nas bibliotecas, ela também agiliza o seu dia a dia nos Restaurantes Universitários (RUs).",
+    "<my-font class=\"text-[#BC1823]\">Dica prática</my-font>: Insira créditos na sua carteirinha antecipadamente para garantir um acesso muito mais rápido e evitar filas nos horários de pico."
+  ]
+}

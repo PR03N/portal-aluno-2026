@@ -43,9 +43,8 @@
     "link": "/academico",
     "target": "_self",
     "icone": "fa-landmark",
-    "titulo": "Administração da Faculdade",
-    "subtitulo": "Confira nossos departamentos",
-    "classeTitulo": "text-[15px]"
+    "titulo": "Vida Acadêmica",
+    "subtitulo": "Confira nossos departamentos"
   },
   {
     "tipo": "padrao",
