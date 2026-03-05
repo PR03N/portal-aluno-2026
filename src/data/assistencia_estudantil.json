@@ -1,0 +1,84 @@
+[
+  {
+    "categoria": "Processo de Avaliação Socioeconômica (PASE)",
+    "icone": "fa-file-invoice",
+    "cor": "text-blue-600",
+    "descricaoGeral": "O PASE tem o objetivo de identificar o perfil socioeconômico do discente no âmbito do seu grupo familiar, a fim de garantir tratamento equânime para o acesso à Política de Assistência Estudantil. O seu resultado é o padrão para a concessão dos auxílios abaixo.",
+    "linkGeral": {
+      "texto": "Página Oficial do PASE",
+      "url": "https://ufsj.edu.br/proae/processo_de_avaliacao_socioeconomica_-_pase.php"
+    },
+    "itens": [
+      {
+        "titulo": "Auxílio Alimentação",
+        "descricao": "Auxiliar a suprir necessidades alimentares dos(as) estudantes de graduação presencial em condição de vulnerabilidade socioeconômica mediante o pagamento de subsídio pecuniário mensal."
+      },
+      {
+        "titulo": "Auxílio Moradia",
+        "descricao": "Custear, parcialmente, os gastos com aluguel, proporcionando melhores condições para a permanência estudantil na Universidade."
+      },
+      {
+        "titulo": "Auxílio Transporte",
+        "descricao": "Contribuir com a frequência do(a) discente em vulnerabilidade socioeconômica às atividades curriculares mediante o pagamento de subsídio pecuniário mensal."
+      },
+      {
+        "titulo": "Auxílio Permanência",
+        "descricao": "Conceder ao discente suporte financeiro para sua permanência no curso de graduação presencial."
+      },
+      {
+        "titulo": "Auxílio Creche",
+        "descricao": "Contribuir com a manutenção das atividades acadêmicas do(a) discente na modalidade presencial bem como reduzir a taxa de retenção e evasão acadêmica decorrentes dos cuidados com a criança."
+      }
+    ]
+  },
+  {
+    "categoria": "Outros Auxílios e Moradia",
+    "icone": "fa-hand-holding-dollar",
+    "cor": "text-green-600",
+    "itens": [
+      {
+        "titulo": "Auxílio Emergencial",
+        "descricao": "Contribuir com a permanência do(a) discente regularmente matriculado em unidades curriculares de cursos de graduação presenciais, em dificuldades socioeconômicas emergenciais e inesperadas, que colocam em risco a sua permanência na Universidade.",
+        "link": "https://ufsj.edu.br/proae/auxilio_emergencial.php"
+      },
+      {
+        "titulo": "Moradia Estudantil",
+        "descricao": "Conceder vagas para residência temporária no(s) campus(campi) que dispõe(m) dessa estrutura."
+      },
+      {
+        "titulo": "Auxílio Inclusão - Discente Apoio",
+        "descricao": "Destinado às ações que contribuam com o acesso e a permanência dos(as) discentes com diferença funcional (deficiência). Consiste no pagamento de auxílio financeiro quando verificado que a interação com o meio constitui-se como uma barreira limitante ao pleno exercício das atividades acadêmicas.",
+        "link": "https://ufsj.edu.br/proae/auxilio_inclusao_-_discente_apoio.php"
+      },
+      {
+        "titulo": "Auxílio Financeiro para Eventos",
+        "descricao": "Concessão de auxílio financeiro (pagamento de diárias) a discentes para participação em eventos acadêmicos nacionais e internacionais, como apresentações de trabalhos, condução de atividades de extensão e competições acadêmicas.",
+        "link": "https://ufsj.edu.br/proae/auxilio_financeiro_para_participacao_em_eventos_academicos_n.php"
+      }
+    ]
+  },
+  {
+    "categoria": "Saúde e Qualidade de Vida",
+    "icone": "fa-heart-pulse",
+    "cor": "text-red-500",
+    "descricaoGeral": "A assistência à saúde do discente tem como finalidade a promoção, a prevenção e a educação em saúde. Colabora com o bem-estar físico, psíquico e social, ofertando assistência psicológica para atendimento básico através da equipe multiprofissional da UFSJ.",
+    "linkGeral": {
+      "texto": "Página Geral de Saúde",
+      "url": "https://ufsj.edu.br/proae/servicos_de_saude.php"
+    },
+    "anexos": [
+      {
+        "titulo": "Projeto Acolher (Psicologia PROAE)",
+        "url": "https://ufsj.edu.br/portal2-repositorio/File/proae/SERVICOS%20PSICOLOGIA/Programa%20acolher(1).pdf"
+      },
+      {
+        "titulo": "Atendimentos PROAE (Outras Ações)",
+        "url": "https://ufsj.edu.br/portal2-repositorio/File/proae/SERVICOS%20PSICOLOGIA/Atendimento%20psicologas%20PROAE%202.pdf"
+      },
+      {
+        "titulo": "Credenciados (Psicologia)",
+        "url": "https://ufsj.edu.br/proae/auxilio_saude_credenciamento_psicologia.php"
+      }
+    ]
+  }
+]

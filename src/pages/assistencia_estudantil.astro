@@ -1,0 +1,83 @@
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+import dadosAssistencia from '../data/assistencia_estudantil.json';
+---
+
+<LayoutBase mostrarBotaoVoltar={true}>
+    <div class="flex flex-col gap-6 max-w-100 mx-auto pb-10">
+
+        <div class="px-2 mb-1">
+            <h2 class="text-xl font-bold text-gray-800">Assistência Estudantil</h2>
+            <p class="text-sm text-gray-500 font-medium mt-1">
+                Conheça os auxílios, programas de moradia e serviços de saúde oferecidos pela PROAE para apoiar a sua permanência na universidade.
+            </p>
+        </div>
+
+        <div class="flex flex-col">
+            {dadosAssistencia.map((sessao) => (
+                <div class="flex flex-col gap-3 mb-4">
+                    
+                    <h3 class="font-bold text-gray-800 text-[15px] flex items-center gap-2 border-b border-gray-200 pb-2">
+                        <i class={`fa-solid ${sessao.icone} ${sessao.cor} w-5 text-center`}></i>
+                        {sessao.categoria}
+                    </h3>
+
+                    {(sessao.descricaoGeral || sessao.linkGeral) && (
+                        <div class="bg-gray-50 border border-gray-100 p-4 rounded-2xl mb-1">
+                            {sessao.descricaoGeral && (
+                                <p class="text-[13px] text-gray-700 font-medium leading-relaxed mb-3">
+                                    {sessao.descricaoGeral}
+                                </p>
+                            )}
+                            {sessao.linkGeral && (
+                                <a href={sessao.linkGeral.url} target="_blank" class="inline-flex bg-white border border-gray-200 text-[#BC1823] px-3 py-2 rounded-xl text-[12px] font-bold shadow-sm items-center gap-2 hover:bg-red-50 transition-colors">
+                                    {sessao.linkGeral.texto} <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            )}
+                        </div>
+                    )}
+
+                    {sessao.itens && sessao.itens.length > 0 && (
+                        <div class="flex flex-col gap-3 mb-4">
+                            {sessao.itens.map((item) => (
+                                <details class="group bg-white border border-gray-100 rounded-[20px] shadow-sm overflow-hidden [&::-webkit-details-marker]:hidden">
+                                    
+                                    <summary class="cursor-pointer p-4 flex justify-between items-center outline-none hover:bg-gray-50 transition-colors">
+                                        <span class="font-bold text-gray-800 text-[13px] pr-4 leading-tight">{item.titulo}</span>
+                                        <i class="fa-solid fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform duration-300 shrink-0"></i>
+                                    </summary>
+
+                                    <div class="px-4 pb-5 pt-1 border-t border-gray-50">
+                                        <p class="text-[13px] text-gray-600 leading-relaxed font-medium mt-2">
+                                            {item.descricao}
+                                        </p>
+                                        
+                                        {'link' in item && item.link && (
+                                            <a href={item.link} target="_blank" class="mt-4 inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wide text-[#BC1823] hover:text-[#9a121b] transition-colors">
+                                                Acessar detalhes <i class="fa-solid fa-arrow-right"></i>
+                                            </a>
+                                        )}
+                                    </div>
+                                    
+                                </details>
+                            ))}
+                        </div>
+                    )}
+
+                    {sessao.anexos && sessao.anexos.length > 0 && (
+                        <div class="flex flex-col gap-3 mb-4">
+                            {sessao.anexos.map((anexo) => (
+                                <a href={anexo.url} target="_blank" class="bg-red-50 border border-red-100 text-[#BC1823] p-3 rounded-[20px] shadow-sm flex items-center justify-between hover:bg-red-100 transition-colors">
+                                    <span class="text-[12px] font-bold pr-2">{anexo.titulo}</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[12px]"></i>
+                                </a>
+                            ))}
+                        </div>
+                    )}
+
+                </div>
+            ))}
+        </div>
+
+    </div>
+</LayoutBase>
