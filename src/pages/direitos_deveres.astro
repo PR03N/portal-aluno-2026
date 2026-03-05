@@ -1,0 +1,74 @@
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+import dadosRegimento from '../data/direitos_deveres.json';
+---
+
+<LayoutBase mostrarBotaoVoltar={true}>
+    <div class="flex flex-col gap-6 max-w-100 mx-auto pb-10">
+
+        <div class="px-2 mb-1">
+            <h2 class="text-xl font-bold text-gray-800">Manual da Vida Acadêmica</h2>
+            <p class="text-sm text-gray-500 font-medium mt-1">
+                Conheça a organização, os direitos e os deveres do estudante da UFSJ, fundamentados no Regimento Geral e resoluções do CONEP.
+            </p>
+        </div>
+
+        <div class="bg-red-50 border border-red-100 rounded-[20px] p-4 mx-1 flex gap-3 items-start">
+            <i class="fa-solid fa-file-pdf text-[#BC1823] mt-0.5 text-lg shrink-0"></i>
+            <div class="flex flex-col">
+                <p class="text-[13px] text-gray-700 leading-tight font-medium mb-3">
+                    <span class="font-bold text-[#BC1823]">Documentos Oficiais:</span> Acesse e baixe as resoluções e o regimento na íntegra.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    {dadosRegimento.documentos.map((doc) => (
+                        <a href={doc.url} target="_blank" class="bg-white border border-red-100 text-[#BC1823] px-3 py-1.5 rounded-lg text-[11px] font-bold shadow-sm flex items-center gap-1.5 hover:bg-red-100 transition-colors">
+                            <i class="fa-solid fa-download"></i> {doc.titulo}
+                        </a>
+                    ))}
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-6 px-1 mt-1">
+            {dadosRegimento.categorias.map((sessao) => (
+                <div class="flex flex-col gap-3">
+                    
+                    <h3 class="font-bold text-gray-800 text-[15px] flex items-center gap-2 border-b border-gray-200 pb-2">
+                        <i class={`fa-solid ${sessao.icone} ${sessao.cor} w-5 text-center`}></i>
+                        {sessao.categoria}
+                    </h3>
+
+                    <div class="flex flex-col gap-2">
+                        {sessao.itens.map((item) => (
+                            <details class="group bg-gray-50 border border-gray-100 rounded-[20px] shadow-sm overflow-hidden [&::-webkit-details-marker]:hidden">
+                                
+                                <summary class="cursor-pointer p-4 flex justify-between items-center outline-none hover:bg-gray-100/50 transition-colors">
+                                    <span class="font-bold text-gray-700 text-[13px] pr-4 leading-tight">{item.titulo}</span>
+                                    <i class="fa-solid fa-chevron-down text-[#BC1823] group-open:rotate-180 transition-transform duration-300 shrink-0"></i>
+                                </summary>
+
+                                <div class="px-4 pb-5 pt-1">
+                                    <div class="text-[13px] text-gray-600 leading-relaxed font-medium space-y-2" set:html={item.descricao} />
+                                    
+                                    {item.base_legal && (
+                                        <div class="mt-4 bg-gray-100 p-3 rounded-xl border border-gray-200">
+                                            <p class="text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-book-bookmark"></i> Base Normativa
+                                            </p>
+                                            <p class="text-[12px] text-gray-700 font-medium leading-tight">
+                                                {item.base_legal}
+                                            </p>
+                                        </div>
+                                    )}
+                                </div>
+                                
+                            </details>
+                        ))}
+                    </div>
+
+                </div>
+            ))}
+        </div>
+
+    </div>
+</LayoutBase>

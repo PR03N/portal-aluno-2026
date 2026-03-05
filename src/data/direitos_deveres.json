@@ -1,0 +1,132 @@
+{
+  "documentos": [
+    {
+      "titulo": "Res. 022",
+      "url": "https://sig.ufsj.edu.br/sigrh/downloadArquivo?idArquivo=1262111&key=387cd986699a2d81ecc2a4a861658455"
+    },
+    {
+      "titulo": "Res. 026",
+      "url": "https://sig.ufsj.edu.br/sigrh/downloadArquivo?idArquivo=665155&key=c9392cb473a45c840cbe8c30bcb52e70"
+    },
+    {
+      "titulo": "Res. 011",
+      "url": "https://sig.ufsj.edu.br/sigrh/downloadArquivo?idArquivo=204768&key=6cedd858883c48c2c06b03c85421e228"
+    },
+    {
+      "titulo": "Regimento",
+      "url": "https://ufsj.edu.br/portal2-repositorio/File/soces/Regimento%20Geral%20da%20UFSJ_AlteradoRes003_2023%20-%20primeira%20revisao.pdf"
+    }
+  ],
+  "categorias": [
+    {
+      "categoria": "Matrícula e Organização",
+      "icone": "fa-folder-open",
+      "cor": "text-blue-600",
+      "itens": [
+        {
+          "titulo": "1. Organização acadêmica dos cursos",
+          "descricao": "Os cursos de graduação da UFSJ são estruturados por meio de currículos compostos por <b>componentes curriculares</b>, cuja integralização garante ao estudante o direito ao diploma correspondente. O currículo e a organização das disciplinas são definidos no <b>Projeto Pedagógico do Curso (PPC)</b>.",
+          "base_legal": "Resolução CONEP nº 022/2021, art. 2º e art. 38-43 do Regimento Geral."
+        },
+        {
+          "titulo": "2. Matrícula inicial e vínculo acadêmico",
+          "descricao": "A matrícula inicial corresponde ao <b>ato formal de vínculo do estudante com o curso da UFSJ</b>. Após a matrícula inicial, o estudante passa a integrar o corpo discente da universidade.",
+          "base_legal": "Resolução CONEP nº 022/2021, art. 1º, §1º, inciso II; Regimento Geral da UFSJ – capítulo do corpo discente."
+        },
+        {
+          "titulo": "3. Inscrição periódica em disciplinas",
+          "descricao": "A cada período letivo o estudante deve realizar <b>inscrição periódica</b>, que consiste na matrícula nas unidades curriculares que pretende cursar naquele semestre.<br><br>A inscrição periódica pode ocorrer em três etapas:<br>I – matrícula (primeira etapa)<br>II – rematrícula (segunda etapa)<br>III – matrícula extraordinária (terceira etapa)",
+          "base_legal": "Resolução CONEP nº 026/2021, art. 20, incisos I, II e III."
+        },
+        {
+          "titulo": "13. Oferta de turmas extemporâneas",
+          "descricao": "Em situações excepcionais podem ser ofertadas <b>turmas extemporâneas</b>, mediante aprovação do colegiado de curso. Essas turmas seguem os mesmos procedimentos acadêmicos das turmas regulares.",
+          "base_legal": "Resolução CONEP nº 011/2023, art. 20, 21 e 22."
+        }
+      ]
+    },
+    {
+      "categoria": "Acompanhamento de Disciplinas",
+      "icone": "fa-laptop-file",
+      "cor": "text-purple-600",
+      "itens": [
+        {
+          "titulo": "4. Responsabilidade quanto às disciplinas",
+          "descricao": "Cabe ao estudante obter junto ao docente responsável as informações referentes a:<br>• cronograma das avaliações<br>• conteúdo programático<br>• atividades acadêmicas da disciplina.",
+          "base_legal": "Resolução CONEP nº 026/2021, art. 19."
+        },
+        {
+          "titulo": "5. Plano de ensino",
+          "descricao": "Cada disciplina possui um <b>Plano de Ensino</b>, elaborado pelo docente responsável. Esse plano deve conter: dados da unidade curricular, ementa, cronograma de aulas, metodologia de ensino, metodologia de avaliação e bibliografia básica e complementar.<br><br>O plano de ensino deve ser publicado com antecedência mínima de <b>30 dias antes do início das aulas</b>.",
+          "base_legal": "Resolução CONEP nº 022/2021, art. 6º, incisos I a VII e §1º."
+        },
+        {
+          "titulo": "6. Turma virtual",
+          "descricao": "A Turma Virtual é o ambiente digital que integra as informações acadêmicas da disciplina. Nesse ambiente ficam disponíveis: plano de ensino, registros acadêmicos, diário eletrônico e informações didáticas da disciplina.",
+          "base_legal": "Resolução CONEP nº 022/2021, art. 5º."
+        },
+        {
+          "titulo": "7. Diário eletrônico",
+          "descricao": "O <b>Diário Eletrônico</b> é o instrumento oficial para registro acadêmico das disciplinas. Nele devem ser registrados: critérios de avaliação, conteúdo ministrado, frequência, atividades realizadas e notas das avaliações.<br><br>O registro de frequência deve ocorrer a cada aula ou em até <b>10 dias úteis após sua realização</b>. As notas das avaliações devem ser registradas no sistema acadêmico em até <b>2 dias úteis após sua divulgação</b>.<br><br>O estudante deve acompanhar suas informações acadêmicas no sistema institucional.",
+          "base_legal": "Resolução CONEP nº 022/2021, art. 7º, caput, §3º, §5º e §6º."
+        },
+        {
+          "titulo": "8. Participação nas atividades letivas",
+          "descricao": "Somente estudantes <b>regularmente matriculados na disciplina</b> podem participar das atividades pedagógicas e das avaliações.",
+          "base_legal": "Resolução CONEP nº 022/2021, art. 8º."
+        }
+      ]
+    },
+    {
+      "categoria": "Frequência e Tratamento Especial",
+      "icone": "fa-calendar-check",
+      "cor": "text-green-600",
+      "itens": [
+        {
+          "titulo": "9. Frequência às atividades acadêmicas",
+          "descricao": "Para aprovação em uma disciplina é exigida <b>frequência mínima de 75% das atividades letivas</b>, conforme legislação educacional brasileira. Assim, o estudante pode ter até <b>25% de faltas</b>.<br><br><b>Inexistência de abono de faltas:</b> Na UFSJ não há abono de faltas por motivos pessoais, tais como: compromissos de trabalho, consultas médicas eletivas, viagens e atividades particulares. Essas ausências são contabilizadas dentro do limite de 25% de faltas permitidas.<br><br><b>Exceções previstas em lei:</b> O abono de faltas ocorre apenas nas hipóteses previstas em legislação específica, como: convocação para serviço militar obrigatório e outras hipóteses expressamente previstas em lei.",
+          "base_legal": "Lei nº 9.394/1996 (Lei de Diretrizes e Bases da Educação Nacional), art. 47."
+        },
+        {
+          "titulo": "10. Tratamento especial",
+          "descricao": "O tratamento especial consiste em regime acadêmico diferenciado concedido em situações excepcionais que impedem temporariamente o estudante de frequentar as aulas.<br><br>Entre os casos previstos estão: condições de saúde devidamente comprovadas, gestação e situações previstas em legislação específica.",
+          "base_legal": "Resolução CONEP nº 022/2021 – capítulo sobre situações especiais de discentes."
+        }
+      ]
+    },
+    {
+      "categoria": "Avaliação da Aprendizagem",
+      "icone": "fa-file-signature",
+      "cor": "text-red-600",
+      "itens": [
+        {
+          "titulo": "11. Avaliação da aprendizagem",
+          "descricao": "Os critérios de avaliação devem ser definidos no Plano de Ensino da disciplina. As avaliações podem ocorrer por meio de diferentes instrumentos pedagógicos, como provas, trabalhos e atividades práticas.<br><br><b>Direito de acesso às avaliações:</b> Após a divulgação do resultado das avaliações, o estudante tem direito de acessar a avaliação realizada e solicitar esclarecimentos sobre os critérios de correção.<br><br><b>Direito à cópia da avaliação:</b> O estudante pode solicitar cópia eletrônica da avaliação realizada, garantindo transparência e acompanhamento de seu desempenho acadêmico.<br><br><b>Segunda chamada de avaliação:</b> Pode ser solicitada quando o estudante estiver impossibilitado de realizar a avaliação na data prevista por motivo devidamente justificado. A análise do pedido compete ao docente responsável ou ao colegiado do curso.",
+          "base_legal": "Resolução CONEP nº 022/2021, art. 6º, inciso VI e art. 7º; Regulamentos acadêmicos dos cursos."
+        }
+      ]
+    },
+    {
+      "categoria": "Direitos e Deveres",
+      "icone": "fa-scale-balanced",
+      "cor": "text-orange-600",
+      "itens": [
+        {
+          "titulo": "12. Integridade acadêmica",
+          "descricao": "A integridade acadêmica é princípio fundamental da vida universitária. São consideradas infrações acadêmicas práticas como:<br>• fraude em avaliações<br>• utilização de materiais não autorizados em provas<br>• copiar respostas de outro estudante<br>• apresentar trabalhos de terceiros como próprios.<br><br>Essas práticas podem resultar em sanções previstas nas normas institucionais.",
+          "base_legal": "Regimento Geral da UFSJ - capítulo do regime disciplinar."
+        },
+        {
+          "titulo": "14 e 15. Recursos e Órgãos Colegiados",
+          "descricao": "O estudante tem direito de apresentar recurso administrativo quando discordar de decisões acadêmicas. Os órgãos colegiados são responsáveis pela deliberação de questões acadêmicas e pela análise de recursos apresentados por estudantes.<br><br>Os recursos acadêmicos seguem a seguinte estrutura institucional:<br>1. Colegiado do Curso<br>2. Câmara de Ensino de Graduação<br>3. Conselho de Ensino, Pesquisa e Extensão (CONEP)",
+          "base_legal": "Regimento Geral da UFSJ, art. 33."
+        },
+        {
+          "titulo": "16. Deveres do estudante",
+          "descricao": "Entre os deveres do estudante estão:<br>• cumprir as normas acadêmicas da universidade<br>• acompanhar o calendário acadêmico<br>• realizar matrícula nas disciplinas nos prazos estabelecidos<br>• acompanhar notas, frequência e avaliações no sistema acadêmico<br>• respeitar docentes, técnicos e colegas<br>• preservar o patrimônio da universidade.",
+          "base_legal": "Regimento Geral da UFSJ."
+        }
+      ]
+    }
+  ]
+}
