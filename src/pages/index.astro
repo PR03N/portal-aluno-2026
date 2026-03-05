@@ -47,7 +47,7 @@ import dadosInicio from '../data/main_menu.json';
             // Renderiza os Cards Quadrados Padrões (1 coluna)
             if (item.tipo === 'padrao') {
                 // Aplica text-lg por padrão, ou a classe customizada caso exista no JSON (para evitar quebra em textos longos)
-                const tamanhoTitulo = item.classeTitulo || "text-lg";
+                const tamanhoTitulo = (item as any).classeTitulo || "text-lg";
 
                 return (
                     <a href={item.link} target={item.target} class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">

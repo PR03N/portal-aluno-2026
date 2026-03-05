@@ -32,6 +32,14 @@
   },
   {
     "tipo": "padrao",
+    "link": "/assistencia_estudantil",
+    "target": "_self",
+    "icone": "fa-hand-holding-heart",
+    "titulo": "Assistência Estudantil",
+    "subtitulo": "Auxílios, moradia, saúde e mais"
+  },
+  {
+    "tipo": "padrao",
     "link": "/biblioteca",
     "target": "_self",
     "icone": "fa-book",
@@ -40,11 +48,19 @@
   },
   {
     "tipo": "padrao",
+    "link": "/direitos_deveres",
+    "target": "_self",
+    "icone": "fa-scale-balanced",
+    "titulo": "Direitos e Deveres",
+    "subtitulo": "Conheça as normas e diretrizes do aluno"
+  },
+  {
+    "tipo": "padrao",
     "link": "/academico",
     "target": "_self",
     "icone": "fa-landmark",
-    "titulo": "Vida Acadêmica",
-    "subtitulo": "Confira nossos departamentos"
+    "titulo": "Estrutura Universitária",
+    "subtitulo": "Confira as principais estruturas da UFSJ"
   },
   {
     "tipo": "padrao",
