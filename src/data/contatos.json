@@ -1,0 +1,26 @@
+[
+  {
+    "cargo": "Pró-reitor(a)",
+    "nome": "Rejane Corrêa da Rocha",
+    "telefone": "(32) 3379-1001",
+    "email": "proen@ufsj.edu.br"
+  },
+  {
+    "cargo": "Pró-reitor(a) Adjunto(a)",
+    "nome": "José Luiz de Oliveira",
+    "telefone": "(32) 3379-1002",
+    "email": "proenadj@ufsj.edu.br"
+  },
+  {
+    "cargo": "Secretário(a) Executivo(a)",
+    "nome": "Helbert Ignácio Silva",
+    "telefone": "(32) 3379-5450",
+    "email": "proen@ufsj.edu.br"
+  },
+  {
+    "cargo": "Secretário(a) Administrativo(a)",
+    "nome": "Juliana Agostini",
+    "telefone": "(32) 3379-1004",
+    "email": "proen@ufsj.edu.br"
+  }
+]
