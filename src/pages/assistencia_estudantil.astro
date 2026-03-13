@@ -51,9 +51,9 @@ import dadosAssistencia from "../data/assistencia_estudantil.json";
             )}
 
             {sessao.itens && sessao.itens.length > 0 && (
-              <div class="flex flex-col lg:grid lg:grid-cols-2 gap-3 md:gap-4 mb-4">
+              <div class="flex flex-col lg:grid lg:grid-cols-2 gap-3 md:gap-4 mb-4 md:items-start">
                 {sessao.itens.map((item) => (
-                  <details class="group bg-white border border-gray-100 rounded-[20px] shadow-sm overflow-hidden [&::-webkit-details-marker]:hidden h-full">
+                  <details class="group bg-white border border-gray-100 rounded-[20px] shadow-sm overflow-hidden [&::-webkit-details-marker]:hidden">
                     <summary class="cursor-pointer px-4 py-4 md:py-5 flex justify-between items-center outline-none hover:bg-gray-50 transition-colors">
                       <span class="font-bold text-gray-800 text-[13px] md:text-[14px] pr-4 leading-tight">
                         {item.titulo}
