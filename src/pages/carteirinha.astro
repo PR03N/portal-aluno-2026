@@ -4,40 +4,40 @@ import dadosCarteirinha from '../data/carteirinha.json';
 ---
 
 <LayoutBase mostrarBotaoVoltar={true}>
-    <div class="flex flex-col gap-4 max-w-100 mx-auto pb-6">
+    <div class="flex flex-col gap-4 md:gap-6 max-w-full md:max-w-4xl lg:max-w-6xl w-full mx-auto pb-10 md:pb-14 px-2 md:px-4 lg:px-6">
         
-        <a href={dadosCarteirinha.solicitacao.url} target="_blank" class="bg-[#BC1823] text-white rounded-[20px] p-6 flex justify-between items-center group">
-            <div class="pr-4">
-                <h2 class="font-bold text-lg leading-tight mb-1">{dadosCarteirinha.solicitacao.titulo}</h2>
-                <p class="text-white/80 text-xs font-light leading-tight mt-2">{dadosCarteirinha.solicitacao.subtitulo}</p>
+        <a href={dadosCarteirinha.solicitacao.url} target="_blank" class="bg-[#BC1823] text-white rounded-[20px] p-6 md:p-7 flex justify-between items-center gap-4 group shadow-sm hover:bg-[#a0141d] transition-colors">
+            <div class="pr-2 md:pr-4">
+                <h2 class="font-bold text-lg md:text-2xl leading-tight mb-1">{dadosCarteirinha.solicitacao.titulo}</h2>
+                <p class="text-white/80 text-xs md:text-sm font-light leading-tight mt-2">{dadosCarteirinha.solicitacao.subtitulo}</p>
             </div>
-            <i class="fa-solid fa-arrow-right text-2xl"></i>
+            <i class="fa-solid fa-arrow-right text-2xl md:text-3xl"></i>
         </a>
 
-        <div class="bg-gray-50 border border-gray-100 rounded-[20px] p-6 mt-2">
+        <div class="bg-gray-50 border border-gray-100 rounded-[20px] p-6 md:p-7 mt-2">
             <h3 class="text-sm text-gray-500 font-bold mb-5 flex items-center gap-2 uppercase tracking-wide">
                 <i class="fa-solid fa-location-dot text-[#BC1823]"></i>Onde usar
             </h3>
-            <div class="flex justify-evenly items-center px-2">
+            <div class="flex justify-evenly items-center px-2 md:px-4 gap-4 md:gap-6">
                 {dadosCarteirinha.locaisDeUso.map((local) => (
                     <div class="flex flex-col items-center gap-2">
-                        <div class="bg-red-100 text-[#BC1823] w-12 h-12 rounded-full flex items-center justify-center">
-                            <i class={`fa-solid ${local.icone} text-xl`}></i>
+                        <div class="bg-red-100 text-[#BC1823] w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center">
+                            <i class={`fa-solid ${local.icone} text-xl md:text-2xl`}></i>
                         </div>
-                        <span class="text-[11px] font-bold text-gray-700 uppercase">{local.rotulo}</span>
+                        <span class="text-[11px] md:text-[12px] font-bold text-gray-700 uppercase text-center">{local.rotulo}</span>
                     </div>
                 ))}
             </div>
         </div>
 
-        <div class="bg-gray-50 border border-gray-100 rounded-[20px] p-6 mt-2">
+        <div class="bg-gray-50 border border-gray-100 rounded-[20px] p-6 md:p-7 mt-2">
             <h3 class="text-sm text-gray-500 font-bold mb-5 flex items-center gap-2 uppercase tracking-wide">
                 <i class="fa-solid fa-circle-info text-[#BC1823]"></i> Importante
             </h3>
             
             <div class="flex flex-col gap-4">
                 {dadosCarteirinha.informacoesImportantes.map((paragrafo) => (
-                    <p class="text-[14px] text-gray-700 leading-relaxed font-medium" set:html={paragrafo} />
+                    <p class="text-[14px] md:text-[15px] text-gray-700 leading-relaxed font-medium" set:html={paragrafo} />
                 ))}
             </div>
             

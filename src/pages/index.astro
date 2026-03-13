@@ -6,7 +6,7 @@ import dadosInicio from '../data/main_menu.json';
 <LayoutBase mostrarBotaoVoltar={false}>
     <script src="../scripts/calendario.js"></script>
 
-    <div class="grid grid-cols-2 gap-3 max-w-100 mx-auto">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 w-full max-w-6xl mx-auto px-4 pb-10">
         {dadosInicio.map((item) => {
             // Renderização condicional: pula o item se não houver link definido
             if (!item.link) return null;
@@ -16,19 +16,19 @@ import dadosInicio from '../data/main_menu.json';
 
             if (item.tipo === 'calendario') {
                 return (
-                    <a href={item.link} target={item.target} rel={relAttr} class="col-span-2 bg-[#BC1823] text-white rounded-[20px] p-5">
-                        <div class="flex justify-between items-start mb-4">
-                            <div class="flex gap-3 items-center">
-                                <i class={`fa-solid ${item.icone} text-3xl`}></i>
+                    <a href={item.link} target={item.target} rel={relAttr} class="col-span-2 md:col-span-full lg:col-span-2 bg-[#BC1823] text-white rounded-[20px] p-5 md:p-7">
+                        <div class="flex justify-between items-start mb-4 md:mb-6">
+                            <div class="flex gap-3 md:gap-4 items-center">
+                                <i class={`fa-solid ${item.icone} text-3xl md:text-4xl`}></i>
                                 <div>
-                                    <h2 class="font-bold text-lg">{item.titulo}</h2>
-                                    <p class="text-xs text-white/80 font-light">{item.subtitulo}</p>
+                                    <h2 class="font-bold text-lg md:text-2xl">{item.titulo}</h2>
+                                    <p class="text-xs md:text-sm text-white/80 font-light">{item.subtitulo}</p>
                                 </div>
                             </div>
-                            <i class="fa-solid fa-arrow-right text-xl"></i>
+                            <i class="fa-solid fa-arrow-right text-xl md:text-2xl"></i>
                         </div>
-                        <div id="lista-calendario" class="ml-3 mt-4 flex flex-col">
-                            <p class="text-white/70 text-[13px] animate-pulse">Carregando datas do calendário...</p>
+                        <div id="lista-calendario" class="ml-3 md:ml-4 mt-4 flex flex-col gap-1 md:gap-2">
+                            <p class="text-white/70 text-[13px] md:text-base animate-pulse">Carregando datas do calendário...</p>
                         </div>
                     </a>
                 );
@@ -36,26 +36,29 @@ import dadosInicio from '../data/main_menu.json';
 
             if (item.tipo === 'destaque') {
                 return (
-                    <a href={item.link} target={item.target} rel={relAttr} class="col-span-2 bg-[#BC1823] text-white rounded-[20px] p-5 flex justify-between items-center">
+                    <a href={item.link} target={item.target} rel={relAttr} class="col-span-2 md:col-span-full lg:col-span-2 bg-[#BC1823] text-white rounded-[20px] p-5 md:p-7 flex justify-between items-center">
                         <div>
-                            <h2 class="font-bold text-2xl leading-tight">{item.titulo}</h2>
-                            <p class="text-xs font-light text-white/80 mt-1">{item.subtitulo}</p>
+                            <h2 class="font-bold text-2xl md:text-3xl leading-tight">{item.titulo}</h2>
+                            <p class="text-xs md:text-sm font-light text-white/80 mt-1 md:mt-2">{item.subtitulo}</p>
                         </div>
-                        <i class="fa-solid fa-arrow-right text-xl"></i>
+                        <i class="fa-solid fa-arrow-right text-xl md:text-2xl"></i>
                     </a>
                 );
             }
 
             if (item.tipo === 'padrao') {
-                const tamanhoTitulo = (item as any).classeTitulo || "text-lg";
+                // Se não houver classe customizada, usa text-lg no mobile e text-xl no tablet
+                const tamanhoTitulo = (item as any).classeTitulo || "text-lg md:text-xl";
+                
                 return (
-                    <a href={item.link} target={item.target} rel={relAttr} class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 flex flex-col justify-center min-h-30">
-                        <i class={`fa-solid ${item.icone} text-3xl mb-2`}></i>
+                    <a href={item.link} target={item.target} rel={relAttr} class="col-span-1 bg-[#BC1823] text-white rounded-[20px] p-4 md:p-6 flex flex-col justify-center min-h-30 md:min-h-40">
+                        <i class={`fa-solid ${item.icone} text-3xl md:text-4xl mb-2 md:mb-4`}></i>
                         <h3 class={`font-bold ${tamanhoTitulo} leading-tight`} set:html={item.titulo} />
-                        <p class="text-xs font-light text-white/80 mt-1 leading-tight">{item.subtitulo}</p>
+                        <p class="text-xs md:text-sm font-light text-white/80 mt-1 md:mt-2 leading-tight">{item.subtitulo}</p>
                     </a>
                 );
             }
         })}
+
     </div>
 </LayoutBase>
