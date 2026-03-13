@@ -1,103 +1,120 @@
 ---
-import LayoutBase from '../layouts/LayoutBase.astro';
-import dadosRu from '../data/rus.json';
+import LayoutBase from "../layouts/LayoutBase.astro";
+import dadosRu from "../data/rus.json";
 ---
 
 <LayoutBase mostrarBotaoVoltar={true}>
-    <div class="flex flex-col gap-5 md:gap-6 lg:gap-8 max-w-100 md:max-w-4xl lg:max-w-6xl w-full mx-auto pb-12 md:pb-16 px-2 md:px-4 lg:px-6">
-
-        <div class="mb-2 md:mb-4 lg:mb-6 text-left md:text-center">
-            <h2 class="text-xl md:text-3xl font-bold text-gray-800 tracking-tight">Restaurante Universitário</h2>
-            <p class="text-sm md:text-base text-gray-500 font-medium mt-1 md:mt-2 max-w-3xl md:max-w-4xl mx-0 md:mx-auto">
-                Confira os horários, valores e acesse o cardápio de cada unidade. O RU funciona apenas em dias letivos.
-            </p>
-        </div>
-
-        <div class="bg-red-50 border border-red-100 rounded-[20px] md:rounded-3xl p-4 md:p-5 lg:p-6 mx-1 md:mx-auto md:w-full lg:w-11/12 flex gap-3 md:gap-4 items-start shadow-sm">
-            <i class="fa-solid fa-circle-exclamation text-[#BC1823] mt-0.5 text-lg"></i>
-            <p class="text-[13px] text-gray-700 leading-tight font-medium">
-                <span class="font-bold text-[#BC1823]">Atenção:</span> Para entrar nos Restaurantes Universitários, é obrigatório apresentar a sua carteira estudantil.
-            </p>
-        </div>
-
-        <div class="flex flex-col lg:grid lg:grid-cols-2 gap-4 md:gap-5 lg:gap-7 px-1 md:px-0 mt-2 md:mt-4">
-            {dadosRu.map((unidade) => (
-                <div class="bg-gray-50 border border-gray-100 rounded-[20px] p-5 md:p-6 lg:p-7 shadow-sm md:shadow-md flex flex-col h-full">
-                    
-                    <div class="flex items-center gap-3 md:gap-4 mb-4 md:mb-5 border-b border-gray-200 pb-4">
-                        <div class="bg-red-100 w-10 h-10 md:w-11 md:h-11 rounded-full flex items-center justify-center shrink-0">
-                            <i class="fa-solid fa-utensils text-[#BC1823] text-[16px] md:text-[18px]"></i>
-                        </div>
-                        <div class="flex flex-col pr-2">
-                            <span class="font-bold text-gray-800 text-[15px] md:text-[17px] leading-snug">{unidade.campus}</span>
-                            <span class="text-[12px] md:text-[13px] text-gray-500 font-medium mt-0.5 flex items-center gap-1">
-                                <i class="fa-solid fa-map-pin text-[11px] md:text-xs"></i>
-                                {unidade.cidade}
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col lg:grid lg:grid-cols-[3fr,2fr] lg:items-start gap-4 lg:gap-5 mb-4 lg:mb-5">
-                        {unidade.horarios && unidade.horarios.length > 0 && (
-                            <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
-                                {unidade.horarios.map((horario) => (
-                                    <div class="flex flex-col bg-white border border-gray-100 p-3 md:p-4 rounded-xl justify-center h-full">
-                                        <span class="text-[10px] md:text-[11px] text-[#BC1823] font-bold uppercase tracking-wider mb-1 flex items-center gap-1.5">
-                                            <i class="fa-regular fa-clock"></i>
-                                            {horario.refeicao}
-                                        </span>
-                                        <span class="text-[13px] md:text-[14px] text-gray-800 font-bold leading-tight">{horario.periodo}</span>
-                                        <span class="text-[10px] md:text-[11px] text-gray-500 font-medium mt-1 leading-tight">{horario.dias}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        )}
-
-                        {unidade.valores && (
-                            <div class="bg-white border border-gray-100 rounded-xl p-3 md:p-4">
-                                <p class="text-[10px] md:text-[11px] text-gray-400 font-bold uppercase tracking-wider mb-2 border-b border-gray-100 pb-1">
-                                    Valores da Refeição
-                                </p>
-                                <div class="flex flex-col gap-2">
-                                    <div class="flex justify-between items-center gap-3">
-                                        <span class="text-[12px] md:text-[13px] text-gray-600 font-medium pr-4 leading-tight">
-                                            Discentes de graduação presencial (matriculados)
-                                        </span>
-                                        <span class="text-[13px] md:text-[14px] text-[#BC1823] font-bold shrink-0">
-                                            {unidade.valores.estudante}
-                                        </span>
-                                    </div>
-                                    <div class="flex justify-between items-center gap-3">
-                                        <span class="text-[11px] md:text-[12px] text-gray-500 pr-4 leading-tight">
-                                            Servidores, terceirizados, visitantes e pós
-                                        </span>
-                                        <span class="text-[12px] md:text-[13px] text-gray-800 font-bold shrink-0">
-                                            {unidade.valores.outros}
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-
-                    {unidade.linkCardapio ? (
-                        <a
-                            href={unidade.linkCardapio}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="mt-auto w-full bg-[#BC1823] text-white text-[13px] md:text-[14px] font-bold py-3 md:py-3.5 rounded-xl flex items-center justify-center gap-2 shadow-sm hover:bg-[#a0141d] transition-colors"
-                        >
-                            <i class="fa-solid fa-list"></i> Ver Cardápio
-                        </a>
-                    ) : (
-                        <div class="mt-auto w-full bg-gray-200 text-gray-500 text-[13px] md:text-[14px] font-bold py-3 md:py-3.5 rounded-xl flex items-center justify-center gap-2 cursor-not-allowed">
-                            <i class="fa-solid fa-list-slash"></i> Cardápio Indisponível
-                        </div>
-                    )}
-
-                </div>
-            ))}
-        </div>
-
+  <div
+    class="flex flex-col gap-5 md:gap-6 lg:gap-8 max-w-100 md:max-w-4xl lg:max-w-6xl w-full mx-auto pb-12 md:pb-16 px-2 md:px-4 lg:px-6"
+  >
+    <div class="mb-2 md:mb-4 lg:mb-6 text-left md:text-center">
+      <h2 class="text-xl md:text-3xl font-bold text-gray-800 tracking-tight">
+        Restaurante Universitário
+      </h2>
+      <p
+        class="text-sm md:text-base text-gray-500 font-medium mt-1 md:mt-2 max-w-3xl md:max-w-4xl mx-0 md:mx-auto"
+      >
+        Confira os horários, valores e acesse o cardápio de cada unidade. O RU
+        funciona apenas em dias letivos.
+      </p>
     </div>
+
+    <div
+      class="bg-red-50 border border-red-100 rounded-[20px] md:rounded-3xl p-4 md:p-5 lg:p-6 mx-1 md:mx-auto md:w-full lg:w-11/12 flex gap-3 md:gap-4 items-start shadow-sm"
+    >
+      <i class="fa-solid fa-circle-exclamation text-[#BC1823] mt-0.5 text-lg"
+      ></i>
+      <p class="text-[13px] text-gray-700 leading-tight font-medium">
+        <span class="font-bold text-[#BC1823]">Atenção:</span> Para entrar nos Restaurantes
+        Universitários, é obrigatório apresentar a sua carteira estudantil.
+      </p>
+    </div>
+
+    <div
+      class="flex flex-col lg:grid lg:grid-cols-2 gap-4 md:gap-5 lg:gap-7 px-1 md:px-0 mt-2 md:mt-4"
+    >
+      {
+        dadosRu.map((unidade) => (
+          <div class="bg-gray-50 border border-gray-100 rounded-[20px] p-5 md:p-6 lg:p-7 shadow-sm md:shadow-md flex flex-col h-full">
+            <div class="flex items-center gap-3 md:gap-4 mb-4 md:mb-5 border-b border-gray-200 pb-4">
+              <div class="bg-red-100 w-10 h-10 md:w-11 md:h-11 rounded-full flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-utensils text-[#BC1823] text-[16px] md:text-[18px]" />
+              </div>
+              <div class="flex flex-col pr-2">
+                <span class="font-bold text-gray-800 text-[15px] md:text-[17px] leading-snug">
+                  {unidade.campus}
+                </span>
+                <span class="text-[12px] md:text-[13px] text-gray-500 font-medium mt-0.5 flex items-center gap-1">
+                  <i class="fa-solid fa-map-pin text-[11px] md:text-xs" />
+                  {unidade.cidade}
+                </span>
+              </div>
+            </div>
+
+            <div class="flex flex-col lg:grid lg:grid-cols-[3fr,2fr] lg:items-start gap-4 lg:gap-5 mb-4 lg:mb-5">
+              {unidade.horarios && unidade.horarios.length > 0 && (
+                <div class="flex gap-4 flex-wrap md:justify-center lg:justify-center">
+                  {unidade.horarios.map((horario) => (
+                    <div class="flex flex-col bg-white border border-gray-100 p-3 md:p-4 rounded-xl justify-center h-full">
+                      <span class="text-[10px] md:text-[11px] text-[#BC1823] font-bold uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                        <i class="fa-regular fa-clock" />
+                        {horario.refeicao}
+                      </span>
+                      <span class="text-[13px] md:text-[14px] text-gray-800 font-bold leading-tight">
+                        {horario.periodo}
+                      </span>
+                      <span class="text-[10px] md:text-[11px] text-gray-500 font-medium mt-1 leading-tight">
+                        {horario.dias}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {unidade.valores && (
+                <div class="bg-white border border-gray-100 rounded-xl p-3 md:p-4">
+                  <p class="text-[10px] md:text-[11px] text-gray-400 font-bold uppercase tracking-wider mb-2 border-b border-gray-100 pb-1">
+                    Valores da Refeição
+                  </p>
+                  <div class="flex flex-col gap-2">
+                    <div class="flex justify-between items-center gap-3">
+                      <span class="text-[12px] md:text-[13px] text-gray-600 font-medium pr-4 leading-tight">
+                        Discentes de graduação presencial (matriculados)
+                      </span>
+                      <span class="text-[13px] md:text-[14px] text-[#BC1823] font-bold shrink-0">
+                        {unidade.valores.estudante}
+                      </span>
+                    </div>
+                    <div class="flex justify-between items-center gap-3">
+                      <span class="text-[11px] md:text-[12px] text-gray-500 pr-4 leading-tight">
+                        Servidores, terceirizados, visitantes e pós
+                      </span>
+                      <span class="text-[12px] md:text-[13px] text-gray-800 font-bold shrink-0">
+                        {unidade.valores.outros}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {unidade.linkCardapio ? (
+              <a
+                href={unidade.linkCardapio}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-auto w-full bg-[#BC1823] text-white text-[13px] md:text-[14px] font-bold py-3 md:py-3.5 rounded-xl flex items-center justify-center gap-2 shadow-sm hover:bg-[#a0141d] transition-colors"
+              >
+                <i class="fa-solid fa-list" /> Ver Cardápio
+              </a>
+            ) : (
+              <div class="mt-auto w-full bg-gray-200 text-gray-500 text-[13px] md:text-[14px] font-bold py-3 md:py-3.5 rounded-xl flex items-center justify-center gap-2 cursor-not-allowed">
+                <i class="fa-solid fa-list-slash" /> Cardápio Indisponível
+              </div>
+            )}
+          </div>
+        ))
+      }
+    </div>
+  </div>
 </LayoutBase>
