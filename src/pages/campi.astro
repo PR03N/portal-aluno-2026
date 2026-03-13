@@ -1,36 +1,47 @@
 ---
-import LayoutBase from '../layouts/LayoutBase.astro';
-import unidades from '../data/campi.json';
+import LayoutBase from "../layouts/LayoutBase.astro";
+import unidades from "../data/campi.json";
 ---
 
 <LayoutBase mostrarBotaoVoltar={true}>
-  <div class="flex flex-col gap-5 md:gap-6 lg:gap-8 max-w-full md:max-w-4xl lg:max-w-6xl w-full mx-auto pb-12 md:pb-16 px-2 md:px-4 lg:px-6">
+  <div
+    class="flex flex-col gap-5 md:gap-6 lg:gap-8 max-w-full md:max-w-4xl lg:max-w-6xl w-full mx-auto pb-12 md:pb-16 px-2 md:px-4 lg:px-6"
+  >
+    {
+      unidades.map((unidade) => {
+        // Se não houver cursos, exibe um aviso amigável em vez de quebrar a tela
+        const listaDeCursos =
+          unidade.cursos && unidade.cursos.length > 0
+            ? unidade.cursos.map((curso) => curso.nome).join(", ")
+            : "Nenhum curso cadastrado no momento";
 
-    {unidades.map((unidade) => {
-      // Se não houver cursos, exibe um aviso amigável em vez de quebrar a tela
-      const listaDeCursos = (unidade.cursos && unidade.cursos.length > 0) 
-        ? unidade.cursos.map(curso => curso.nome).join(', ') 
-        : 'Nenhum curso cadastrado no momento';
-
-      return (
-        <div class="bg-gray-50 border border-gray-100 rounded-[20px] p-6 md:p-7 shadow-sm flex flex-col gap-3">
-          <div class="flex items-center gap-3 md:gap-4 mb-2">
-            <i class="fa-solid fa-location-dot text-[#BC1823] text-xl md:text-2xl"></i>
-            <h3 class="font-bold text-gray-800 text-lg md:text-xl leading-tight">{unidade.campus}</h3>
+        return (
+          <div class="bg-gray-50 border border-gray-100 rounded-[20px] p-6 md:p-7 shadow-sm flex flex-col gap-3">
+            <div class="flex items-center gap-3 md:gap-4 mb-2">
+              <i class="fa-solid fa-location-dot text-[#BC1823] text-xl md:text-2xl" />
+              <h3 class="font-bold text-gray-800 text-lg md:text-xl leading-tight">
+                {unidade.campus}
+              </h3>
+            </div>
+            <div class="mb-4">
+              <p class="text-[11px] md:text-[12px] text-gray-500 font-bold uppercase tracking-wider mb-1">
+                Localização
+              </p>
+              <p class="text-[13px] md:text-[14px] text-[#BC1823] font-semibold flex items-center gap-2">
+                <i class="fa-solid fa-map-pin" /> {unidade.localizacao}
+              </p>
+            </div>
+            <div class="pt-4 border-t border-gray-200">
+              <p class="text-[11px] md:text-[12px] text-gray-500 font-bold uppercase tracking-wider mb-2">
+                Cursos Ofertados
+              </p>
+              <p class="text-[13px] md:text-[14px] text-gray-600 leading-relaxed font-medium">
+                {listaDeCursos}.
+              </p>
+            </div>
           </div>
-          <div class="mb-4">
-            <p class="text-[11px] md:text-[12px] text-gray-500 font-bold uppercase tracking-wider mb-1">Localização</p>
-            <p class="text-[13px] md:text-[14px] text-[#BC1823] font-semibold flex items-center gap-2">
-              <i class="fa-solid fa-map-pin"></i> {unidade.localizacao}
-            </p>
-          </div>
-          <div class="pt-4 border-t border-gray-200">
-            <p class="text-[11px] md:text-[12px] text-gray-500 font-bold uppercase tracking-wider mb-2">Cursos Ofertados</p>
-            <p class="text-[13px] md:text-[14px] text-gray-600 leading-relaxed font-medium">{listaDeCursos}.</p>
-          </div>
-        </div>
-      );
-    })}
-
+        );
+      })
+    }
   </div>
 </LayoutBase>

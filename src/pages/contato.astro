@@ -1,72 +1,96 @@
 ---
-import LayoutBase from '../layouts/LayoutBase.astro';
-import dadosContato from '../data/contatos.json';
+import LayoutBase from "../layouts/LayoutBase.astro";
+import dadosContato from "../data/contatos.json";
 ---
 
 <LayoutBase mostrarBotaoVoltar={true}>
-    <div class="flex flex-col gap-5 md:gap-6 lg:gap-8 max-w-full md:max-w-4xl lg:max-w-6xl w-full mx-auto pb-12 md:pb-16 px-2 md:px-4 lg:px-6">
-
-        <div class="mb-2 md:mb-4 text-left md:text-center">
-            <h2 class="text-xl md:text-3xl font-bold text-gray-800">Fale Conosco</h2>
-            <p class="text-sm md:text-base text-gray-500 font-medium mt-1 md:mt-2 max-w-3xl md:max-w-4xl mx-0 md:mx-auto">
-                Entre em contato com a equipe da Pró-Reitoria para tirar dúvidas ou buscar orientações.
-            </p>
-        </div>
-
-        <div class="flex flex-col lg:grid lg:grid-cols-2 gap-4 md:gap-5 px-1 md:px-0">
-            {dadosContato.map((contato) => {
-                // Remove todos os caracteres não numéricos para o link do telefone funcionar perfeitamente
-                const telefoneLimpo = contato.telefone ? contato.telefone.replace(/\D/g, '') : '';
-
-                return (
-                    <div class="bg-gray-50 border border-gray-100 rounded-[20px] p-5 md:p-6 shadow-sm flex flex-col h-full">
-                        
-                        <div class="pb-3 mb-2 border-b border-gray-200">
-                            <span class="text-[10px] md:text-[11px] text-[#BC1823] font-bold uppercase tracking-wider mb-1 block">{contato.cargo}</span>
-                            <h3 class="font-bold text-gray-800 text-[16px] md:text-[17px] leading-tight">{contato.nome}</h3>
-                        </div>
-
-                        <div class="flex flex-col gap-3">
-                            {contato.telefone && (
-                                <a href={`tel:+55${telefoneLimpo}`} class="flex items-center gap-3 text-gray-600">
-                                    <div class="bg-white border border-gray-200 w-8 h-8 rounded-full flex items-center justify-center">
-                                        <i class="fa-solid fa-phone text-[12px] text-[#BC1823]"></i>
-                                    </div>
-                                    <span class="text-[13px] md:text-[14px] font-medium">{contato.telefone}</span>
-                                </a>
-                            )}
-
-                            {contato.email && (
-                                <a href={`mailto:${contato.email}`} class="flex items-center gap-3 text-gray-600">
-                                    <div class="bg-white border border-gray-200 w-8 h-8 rounded-full flex items-center justify-center">
-                                        <i class="fa-solid fa-envelope text-[12px] text-[#BC1823]"></i>
-                                    </div>
-                                    <span class="text-[13px] md:text-[14px] font-medium break-all">{contato.email}</span>
-                                </a>
-                            )}
-                        </div>
-                    </div>
-                );
-            })}
-        </div>
-
-        <div class="bg-red-50 border border-red-100 rounded-[20px] p-5 mx-1 mt-2 flex gap-3 items-start">
-            <i class="fa-solid fa-location-dot text-[#BC1823] mt-0.5 text-lg shrink-0"></i>
-            <div class="flex flex-col">
-                <p class="text-[13px] text-gray-700 leading-tight font-medium mb-1">
-                    <span class="font-bold text-[#BC1823]">Horário de Funcionamento</span>
-                </p>
-                <span class="flex flex-col text-[12px] text-gray-600 leading-relaxed font-medium">
-                    <span>07h às 13h - 14h às 20h</span>
-                    <span>Campus Santo Antônio (CSA) </span>
-                    <span>Sala 3.12 - Prédio Principal</span>
-                    <span>
-                        Praça Frei Orlando, 170 - Centro
-                        São João del-Rei - MG
-                    </span>
-                </span>
-            </div>
-        </div>
-
+  <div
+    class="flex flex-col gap-5 md:gap-6 lg:gap-8 max-w-full md:max-w-4xl lg:max-w-6xl w-full mx-auto pb-12 md:pb-16 px-2 md:px-4 lg:px-6"
+  >
+    <div class="mb-2 md:mb-4 text-left md:text-center">
+      <h2 class="text-xl md:text-3xl font-bold text-gray-800">Fale Conosco</h2>
+      <p
+        class="text-sm md:text-base text-gray-500 font-medium mt-1 md:mt-2 max-w-3xl md:max-w-4xl mx-0 md:mx-auto"
+      >
+        Entre em contato com a equipe da Pró-Reitoria para tirar dúvidas ou
+        buscar orientações.
+      </p>
     </div>
+
+    <div
+      class="flex flex-col lg:grid lg:grid-cols-2 gap-4 md:gap-5 px-1 md:px-0"
+    >
+      {
+        dadosContato.map((contato) => {
+          // Remove todos os caracteres não numéricos para o link do telefone funcionar perfeitamente
+          const telefoneLimpo = contato.telefone
+            ? contato.telefone.replace(/\D/g, "")
+            : "";
+
+          return (
+            <div class="bg-gray-50 border border-gray-100 rounded-[20px] p-5 md:p-6 shadow-sm flex flex-col h-full">
+              <div class="pb-3 mb-2 border-b border-gray-200">
+                <span class="text-[10px] md:text-[11px] text-[#BC1823] font-bold uppercase tracking-wider mb-1 block">
+                  {contato.cargo}
+                </span>
+                <h3 class="font-bold text-gray-800 text-[16px] md:text-[17px] leading-tight">
+                  {contato.nome}
+                </h3>
+              </div>
+
+              <div class="flex flex-col gap-3">
+                {contato.telefone && (
+                  <a
+                    href={`tel:+55${telefoneLimpo}`}
+                    class="flex items-center gap-3 text-gray-600"
+                  >
+                    <div class="bg-white border border-gray-200 w-8 h-8 rounded-full flex items-center justify-center">
+                      <i class="fa-solid fa-phone text-[12px] text-[#BC1823]" />
+                    </div>
+                    <span class="text-[13px] md:text-[14px] font-medium">
+                      {contato.telefone}
+                    </span>
+                  </a>
+                )}
+
+                {contato.email && (
+                  <a
+                    href={`mailto:${contato.email}`}
+                    class="flex items-center gap-3 text-gray-600"
+                  >
+                    <div class="bg-white border border-gray-200 w-8 h-8 rounded-full flex items-center justify-center">
+                      <i class="fa-solid fa-envelope text-[12px] text-[#BC1823]" />
+                    </div>
+                    <span class="text-[13px] md:text-[14px] font-medium break-all">
+                      {contato.email}
+                    </span>
+                  </a>
+                )}
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+
+    <div
+      class="bg-red-50 border border-red-100 rounded-[20px] p-5 mx-1 mt-2 flex gap-3 items-start"
+    >
+      <i class="fa-solid fa-location-dot text-[#BC1823] mt-0.5 text-lg shrink-0"
+      ></i>
+      <div class="flex flex-col">
+        <p class="text-[13px] text-gray-700 leading-tight font-medium mb-1">
+          <span class="font-bold text-[#BC1823]">Horário de Funcionamento</span>
+        </p>
+        <span
+          class="flex flex-col text-[12px] text-gray-600 leading-relaxed font-medium"
+        >
+          <span>07h às 13h - 14h às 20h</span>
+          <span>Campus Santo Antônio (CSA) </span>
+          <span>Sala 3.12 - Prédio Principal</span>
+          <span> Praça Frei Orlando, 170 - Centro São João del-Rei - MG </span>
+        </span>
+      </div>
+    </div>
+  </div>
 </LayoutBase>
