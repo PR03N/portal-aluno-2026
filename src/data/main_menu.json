@@ -16,7 +16,7 @@
   },
   {
     "tipo": "padrao",
-    "link": "/ru",
+    "link": "./ru.html",
     "target": "_self",
     "icone": "fa-utensils",
     "titulo": "Restaurante Universitário",
@@ -24,7 +24,7 @@
   },
   {
     "tipo": "padrao",
-    "link": "/carteirinha",
+    "link": "./carteirinha.html",
     "target": "_self",
     "icone": "fa-id-card",
     "titulo": "Carteirinha de Estudante",
@@ -32,7 +32,7 @@
   },
   {
     "tipo": "padrao",
-    "link": "/assistencia_estudantil",
+    "link": "./assistencia_estudantil.html",
     "target": "_self",
     "icone": "fa-hand-holding-heart",
     "titulo": "Assistência Estudantil",
@@ -40,7 +40,7 @@
   },
   {
     "tipo": "padrao",
-    "link": "/biblioteca",
+    "link": "./biblioteca.html",
     "target": "_self",
     "icone": "fa-book",
     "titulo": "Bibliotecas",
@@ -48,7 +48,7 @@
   },
   {
     "tipo": "padrao",
-    "link": "/direitos_deveres",
+    "link": "./direitos_deveres.html",
     "target": "_self",
     "icone": "fa-scale-balanced",
     "titulo": "Direitos e Deveres",
@@ -56,7 +56,7 @@
   },
   {
     "tipo": "padrao",
-    "link": "/academico",
+    "link": "./academico.html",
     "target": "_self",
     "icone": "fa-landmark",
     "titulo": "Estrutura Universitária",
@@ -64,7 +64,7 @@
   },
   {
     "tipo": "padrao",
-    "link": "/campi",
+    "link": "./campi.html",
     "target": "_self",
     "icone": "fa-map-location-dot",
     "titulo": "Os <my-font class='italic'>CAMPI</my-font>",
@@ -72,7 +72,7 @@
   },
   {
     "tipo": "padrao",
-    "link": "/cursos",
+    "link": "./cursos.html",
     "target": "_self",
     "icone": "fa-graduation-cap",
     "titulo": "Cursos",
@@ -80,7 +80,7 @@
   },
   {
     "tipo": "padrao",
-    "link": "/contato",
+    "link": "./contato.html",
     "target": "_self",
     "icone": "fa-phone",
     "titulo": "Contato",
