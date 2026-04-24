@@ -88,6 +88,14 @@
   },
   {
     "tipo": "padrao",
+    "link": "https://ufsj.edu.br/portal2-repositorio/File/proen/guia_pratico_nocoes_de_primeiros_socorros.pdf",
+    "target": "_blank",
+    "icone": "fa-hand-holding-medical",
+    "titulo": "Guia de Primeiros Socorros",
+    "subtitulo": "Cuidados que salvam vidas"
+  },
+  {
+    "tipo": "padrao",
     "link": "https://ufsj.edu.br/",
     "target": "_blank",
     "icone": "fa-globe",
